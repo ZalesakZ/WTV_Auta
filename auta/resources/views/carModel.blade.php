@@ -23,11 +23,11 @@
         @endif
     </head>
     <body class="font-sans antialiased">
-
+    <header>
     <header>
         <div>
             <nav>
-                <a href="" class="aktivni"><i class="fa-solid fa-house-chimney"></i></a>
+                <a href="{{ route('welcome.route') }}"><i class="fa-solid fa-house-chimney"></i></a>
                 <div class="menu">
                     <a href="#">Filmy</a>
                     <div class="seznam">
@@ -42,56 +42,60 @@
             </nav>
         </div>
         <div class="obsah">
-            <img src="img/logo.png" alt="Logo" class="image">
+            <img src="../img/logo.png" alt="Logo" class="image">
             <div class="login">
-                
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Dashboard
-                                    </a>
-                                          
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Log in
-                                    </a>
-                                    
-                                    
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                        >
-                                            Register
-                                        </a>
-                                       
-                                    @endif
-                                @endauth
-                            </nav>
+            @if (Route::has('login'))
+                <nav class="-mx-3 flex flex-1 justify-end">
+                    @auth
+                        <a
+                            href="{{ url('/dashboard') }}"
+                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                        >
+                            Dashboard
+                        </a>
+                              
+                    @else
+                        <a
+                            href="{{ route('login') }}"
+                            
+                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                        >
+                            Log in
+                        </a>
+                        
+                        
+                        @if (Route::has('register'))
+                            <a
+                                href="{{ route('register') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                            >
+                                Register
+                            </a>
+                           
                         @endif
-
-                        <hr>
+                    @endauth
+                </nav>
+            @endif
             </div>        
         </div>
     </header>
 
     <main>
-        <h1>Vítejte na naší stránce</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus lectus. Integer sit amet metus non odio dictum commodo.</p>
+        <section id="text">
+            <h1>Car name</h1>
+            <p>Car lore.</p>
+        </section>
+        <hr>
+        <section id="detail">
+            <div class="karta">
+                <img id="detail" src="../img/ilustracniObrazek.jpeg" alt="car">
+            </div>
+        </section>
 
     </main>
 
     <footer>
         <p>&copy; 2024 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
     </footer>
-            
 
-                    
+    

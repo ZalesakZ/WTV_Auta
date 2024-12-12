@@ -1,0 +1,29 @@
+table{
+    width:100%;
+    min-height: 500px;
+}
+   
+table, th, td {
+    border: 5px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead{
+    background-color: lightgray;
+}
+
+td{
+    width: 33%;
+    height: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+td img{
+    width: 66%;
+    height: auto;
+
+    margin-top: 7px;
+}

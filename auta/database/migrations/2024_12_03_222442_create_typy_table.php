@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('typy', function (Blueprint $table) {
             $table->id();
+            $table->string('sloupec3');
+            $table->integer('sloupec4');
             $table->timestamps();
         });
     }

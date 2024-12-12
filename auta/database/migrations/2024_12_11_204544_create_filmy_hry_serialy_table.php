@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('auta', function (Blueprint $table) {
+        Schema::create('filmy_hry_serialy', function (Blueprint $table) {
             $table->id();
-            $table->string("jmeno")->unique();
-            $table->unsignedBigInteger("druh");
-            $table->tinyText("popis")->nullable();
             $table->timestamps();
-
-            $table->foreign("druh")->on("types")->references("id");
         });
     }
 
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('auta');
+        Schema::dropIfExists('filmy_hry_serialy');
     }
 };

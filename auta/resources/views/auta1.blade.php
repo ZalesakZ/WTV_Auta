@@ -23,15 +23,14 @@
         @endif
     </head>
     <body class="font-sans antialiased">
-
     <header>
         <div>
             <nav>
-                <a href="" class="aktivni"><i class="fa-solid fa-house-chimney"></i></a>
+                <a href="{{ route('welcome.route') }}"><i class="fa-solid fa-house-chimney"></i></a>
                 <div class="menu">
-                    <a href="#">Filmy</a>
+                    <a href="#" class="aktivni">Filmy</a>
                     <div class="seznam">
-                        <a href="{{ route('auta1.route') }}">Auta1</a>
+                        <a href="#" class="aktivni">Auta 1</a>
                         <a href="{{ route('auta2.route') }}">Auta2</a>
                         <a href="{{ route('auta3.route') }}">Auta3</a>
                     </div>
@@ -42,56 +41,89 @@
             </nav>
         </div>
         <div class="obsah">
-            <img src="img/logo.png" alt="Logo" class="image">
+            <img src="../img/logo.png" alt="Logo" class="image">
             <div class="login">
-                
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Dashboard
-                                    </a>
-                                          
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Log in
-                                    </a>
-                                    
-                                    
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                        >
-                                            Register
-                                        </a>
-                                       
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
 
-                        <hr>
+
+                @if (Route::has('login'))
+                <nav class="-mx-3 flex flex-1 justify-end">
+                    @auth
+                        <a
+                            href="{{ url('/dashboard') }}"
+                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                        >
+                            Dashboard
+                        </a>
+                              
+                    @else
+                        <a
+                            href="{{ route('login') }}"
+                            
+                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                        >
+                            Log in
+                        </a>
+                        
+                        
+                        @if (Route::has('register'))
+                            <a
+                                href="{{ route('register') }}"
+                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                            >
+                                Register
+                            </a>
+                           
+                        @endif
+                    @endauth
+                </nav>
+            @endif
+
+            
             </div>        
         </div>
     </header>
 
     <main>
-        <h1>Vítejte na naší stránce</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac faucibus lectus. Integer sit amet metus non odio dictum commodo.</p>
+        <section id="text">
+            <h1>Auta 1</h1>
+            <p>Lore filmu.</p>
+        </section>
+        <hr>
+        <section id="galerie">
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </section>
 
     </main>
 
     <footer>
         <p>&copy; 2024 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
     </footer>
-            
-
-                    

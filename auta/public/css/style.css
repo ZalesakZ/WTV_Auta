@@ -1,0 +1,123 @@
+/* Celkové nastavení pro reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav{
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+nav a:hover, nav a.aktivni{
+    color:  white;
+    background-color:darkorange;
+}
+
+.aktivni{
+    font-weight: bold;
+}
+
+header .obsah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.login a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+header .image {
+    max-width: 175px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align:left;
+    background-color: #f9f9f9;
+    color: black;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+
+footer {
+    background-color: #8B0000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.login hr {
+    border: 0;/*reset nastavení*/
+    border-top: 1px solid white;
+    margin: 3px 0;
+}
+
+
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+.seznam {
+    display: none; /*skrytí prvků*/
+    position: absolute;
+    background-color: black;
+    min-width: 95px;
+    border-radius: 10px;
+    margin-top: 5px;
+    z-index: 1;
+    padding: 0;
+}
+
+.seznam a {
+    display: block;/*tlačítka zarovnána v bloku*/
+}
+
+.menu:hover .seznam {
+    display: block; /*zobrazit tlačítka*/
+}
+
+#text div{
+    border-left: black solid 6px;
+    border-right: black solid 6px;
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+
+    margin: 3px;
+    padding: 6px;
+    border-radius: 10px;
+}
