@@ -44,9 +44,9 @@
         <div class="obsah">
             <img src="img/logo.png" alt="Logo" class="image">
             <div class="login">
-                
+
                         @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
+                            <nav class="-mx-3 flex flex-1 justify-end flex-col">
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"
@@ -54,17 +54,18 @@
                                     >
                                         Dashboard
                                     </a>
-                                          
+
                                 @else
                                     <a
                                         href="{{ route('login') }}"
-                                        
+
                                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
                                     >
                                         Log in
                                     </a>
-                                    
-                                    
+
+                                    <hr>
+
                                     @if (Route::has('register'))
                                         <a
                                             href="{{ route('register') }}"
@@ -72,14 +73,14 @@
                                         >
                                             Register
                                         </a>
-                                       
+
                                     @endif
                                 @endauth
                             </nav>
                         @endif
 
-                        <hr>
-            </div>        
+
+            </div>
         </div>
     </header>
 
@@ -92,6 +93,5 @@
     <footer>
         <p>&copy; 2024 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
     </footer>
-            
 
-                    
+
