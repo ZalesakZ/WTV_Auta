@@ -48,7 +48,7 @@
             <div class="login">
 
                         @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
+                            <nav class="-mx-3 flex flex-1 flex-col">
                                 @auth
                                     <a
                                         href="{{ url('/dashboard') }}"
@@ -65,7 +65,7 @@
                                     >
                                         Log in
                                     </a>
-                                    
+                                    <hr>
                                     
                                     @if (Route::has('register'))
                                         <a
@@ -80,7 +80,7 @@
                             </nav>
                         @endif
 
-                        <hr>
+                    
             </div>        
         </div>
     </header>
