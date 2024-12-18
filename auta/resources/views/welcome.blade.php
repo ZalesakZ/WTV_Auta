@@ -92,7 +92,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2026</p>
+        <p>&copy; 2024 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
     </footer>
 
 
