@@ -14,18 +14,20 @@ return new class extends Migration
         Schema::create('auto', function (Blueprint $table) {
             $table->id();
             $table->string('jmeno')->unique();
-            $table->string('barva', 10);
             $table->unsignedBigInteger('typ');
             $table->boolean('zavodnik')->default(false);
-            $table->integer('pocet_poharu');
+            $table->unsignedBigInteger('pocet_poharu')->default(0);
             $table->string('historie')->nullable();
-            $table->unsignedBigInteger('objeveni');
+            $table->boolean('auta1')->default(false);
+            $table->boolean('auta2')->default(false);
+            $table->boolean('auta3')->default(false);
+            $table->boolean('serialy')->default(false);
+            $table->boolean('hry')->default(false);
 
             $table->timestamps();
 
             // Foreign keys
-            $table->foreign('typ')->references('id')->on('typy')->onDelete('cascade');
-            $table->foreign('objeveni')->references('id')->on('filmy_hry_serialy')->onDelete('cascade');
+            $table->foreign('typ')->on('typy')->references('id');
         });
     }
 
