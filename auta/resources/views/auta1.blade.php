@@ -9,9 +9,11 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="stylesheet" href="../css/galeryStyle.css">
+        
+        <link rel="stylesheet" href= {{ asset('css/style.css') }}>
+        <link rel="stylesheet" href= {{ asset('css/topStyle.css') }}>
+        <link rel="stylesheet" href= {{ asset('css/galeryStyle.css') }}>
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -89,37 +91,51 @@
             <p>Lore filmu.</p>
         </section>
         <hr>
+        <!-- <section id="galerie">
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="karta">
+                <img src="../img/ilustracniObrazek.jpeg" alt="car">
+                <a href="{{ route('carModel.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </section> -->
+
         <section id="galerie">
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
+            @foreach ($auuta as $aut)
+                    <div class="karta">
+                        <img
+                                src="img/{{$aut->id}}.png"
+                                alt="{{$aut ->jmeno}}"
+                            >
+                        <a href="{{ route('carModel.route', ['id' => $aut->id])}}">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        </div>
+            @endforeach
         </section>
 
     </main>

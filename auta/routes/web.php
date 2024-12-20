@@ -1,19 +1,38 @@
 <?php
 
+use App\Http\Controllers\PageController;
+use App\Models\Auto;
+use App\Models\Typ;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/auta1', [PageController::class, 'ukazIndex']) ->name("auta1.route");
+
+Route::get("/carModel/{id}", function (int $id) {
+
+    $auta = Auto::find($id);
+
+    if($auta === null)
+    {
+        return abort(404);
+    }
+
+    //$typ = Typ::find($pokemon->druh);
+
+return view('carModel',["aut" => $auta/*, 'typ' => $typ*/]);
+
+})->name("carModel");
+
+
 
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome.route');
 
+/*
 Route::get('/auta1', function () {
     return view('auta1');
 })->name('auta1.route');
-
+*/
 Route::get('/auta2', function () {
     return view('auta2');
 })->name('auta2.route');

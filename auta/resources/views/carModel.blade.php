@@ -90,9 +90,32 @@
             <div class="karta">
                 <img id="detail" src="../img/ilustracniObrazek.jpeg" alt="car">
             </div>
-        </section>
+        
 
     </main>
+
+    <section id="detail">
+            <div class="karta">
+                <h2>{{ $aut->jmeno }}</h2>
+                <img
+                    src="img/{{$aut->id}}.png"
+                    alt="{{$aut ->jmeno}}"
+                >
+                <div class="typy">
+                    <a href="{{ route ('podleTypu', ['typ' => $aut->druh]) }}">
+                        <span style="background: {{ $aut->typ->barva }}">
+                            {{ $aut->typy->nazev }}
+                        </span>
+                    </a>
+                </div>
+                <p>
+                    {{ $aut->historie }}
+                </p>
+                <a href="{{ route('auta1.route') }}">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+    </section>
 
     <footer>
         <p>&copy; 2024 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
