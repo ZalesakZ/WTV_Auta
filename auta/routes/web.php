@@ -29,11 +29,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome.route');
 
-/*
-Route::get('/auta1', function () {
+
+/*Route::get('/auta1', function () {
     return view('auta1');
-})->name('auta1.route');
-*/
+})->name('auta1.route');*/
+
 Route::get('/auta2', function () {
     return view('auta2');
 })->name('auta2.route');
