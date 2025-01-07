@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('zavodnik')->default("ne");
             $table->unsignedBigInteger('pocet_poharu')->default(0);
             $table->string('historie')->nullable();
-            $table->string('auta1')->default("ne");
+            $table->boolean("auta1")->default(false);
             $table->string('auta2')->default("ne");
             $table->string('auta3')->default("ne");
             $table->string('serialy')->default("ne");
