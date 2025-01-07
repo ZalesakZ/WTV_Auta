@@ -19,6 +19,8 @@ Route::get("/carModel/{id}", function (int $id) {
     //$typ = Typ::find($pokemon->druh);
 
 return view('carModel',["aut" => $auta/*, 'typ' => $typ*/]);
+return view('auta1',["aut" => $auta/*, 'typ' => $typ*/]);
+
 
 })->name("carModel");
 
@@ -29,9 +31,9 @@ Route::get('/', function () {
 })->name('welcome.route');
 
 
-Route::get('/auta1', function () {
+/*Route::get('/auta1', function () {
     return view('auta1');
-})->name('auta1.route');
+})->name('auta1.route');*/
 
 Route::get('/auta2', function () {
     return view('auta2');
