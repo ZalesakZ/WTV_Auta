@@ -94,7 +94,7 @@
 
     </main>
 
-    <section id="detail">
+    <!-- <section id="detail">
             <div class="karta">
                 <h2>{{ $aut->jmeno }}</h2>
                 <img
@@ -115,7 +115,8 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
             </div>
-    </section>
+    </section> -->
+    
 
     <footer>
         <p>&copy; 2024 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
