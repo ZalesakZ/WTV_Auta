@@ -6,13 +6,13 @@
         </section>
         <hr>
         <section id="galerie">
-            @foreach ($auta as $auto)
+            @foreach ($auuta as $auta)
                 <div class="karta">
                     <img
-                            src="img/{{$auto->id}}.png"
-                            alt="{{$auto ->jmeno}}"
+                            src="img/{{$aut->id}}.png"
+                            alt="{{$aut ->jmeno}}"
                         >
-                    <a href="{{ route('carModel.route', ['id' => $auto->id])}}">
+                    <a href="{{ route('carModel.route', ['id' => $aut->id])}}">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </div>

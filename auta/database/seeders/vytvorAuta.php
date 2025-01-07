@@ -15,7 +15,7 @@ class vytvorAuta extends Seeder
     public function run(): void
     {
         $auta = [
-            ["name" => "Blesk McQueen", "type" => 2, "zavodnik" => "ano", "pocet_poharu" => 50, "historie" => "blesk info", "auta1" => false, "auta2" => "ano", "auta3" => "ano", "serialy" => "ano", "hry" => "ano" ],
+            ["name" => "Blesk McQueen", "type" => 2, "zavodnik" => "ano", "pocet_poharu" => 50, "historie" => "blesk info", "auta1" => "ano", "auta2" => "ano", "auta3" => "ano", "serialy" => "ano", "hry" => "ano" ],
             ["name" => "Burák", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0,"historie" => "Burák info", "auta1" => "ano", "auta2" => "ano", "auta3" => "ano", "serialy" => "ano", "hry" => "ano" ],
             ["name" => "Sally Carrera", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0,"historie" => "Sally Carrera info", "auta1" => "ano", "auta2" => "ne", "auta3" => "ne", "serialy" => "ne", "hry" => "ne" ],
             ["name" => "Doktor Hudson", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0, "historie" => "Doktor Hudson info", "auta1" => "ano", "auta2" => "ne", "auta3" => "ano", "serialy" => "ne", "hry" => "ano" ],

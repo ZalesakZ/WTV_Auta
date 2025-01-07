@@ -12,8 +12,10 @@ class PageController extends Controller
     public function ukazIndex()
     {
         $auta = Auto::all();
-        return view('auta1', ["auta" => $auta]);
+        return view('auta1', ["auuta" => $auta]);
 
+        $auta = Auto::all();
+        return view('carModel', ["auuta" => $auta]);
     }
     
 }
