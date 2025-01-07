@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Auto;
+use App\Models\Auto2;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,7 +14,6 @@ class vytvorAuta extends Seeder
      */
     public function run(): void
     {
-        //"nazev", "druh"
         $auta = [
             ["name" => "Blesk McQueen", "type" => 2, "zavodnik" => "ano", "pocet_poharu" => 50, "historie" => "blesk info", "auta1" => "ano", "auta2" => "ano", "auta3" => "ano", "serialy" => "ano", "hry" => "ano" ],
             ["name" => "Burák", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0,"historie" => "Burák info", "auta1" => "ano", "auta2" => "ano", "auta3" => "ano", "serialy" => "ano", "hry" => "ano" ],
@@ -23,6 +23,21 @@ class vytvorAuta extends Seeder
 
         foreach ($auta as $a) {
             Auto::insert([
+                "jmeno" => $a["name"],
+                "typ" => $a["type"],
+                "zavodnik" => $a["zavodnik"],
+                "pocet_poharu" => $a["pocet_poharu"],
+                "historie" => $a["historie"],
+                "auta1" => $a["auta1"],
+                "auta2" => $a["auta2"],
+                "auta3" => $a["auta3"],
+                "serialy" => $a["serialy"],
+                "hry" => $a["hry"],
+            ]);
+        }
+
+        foreach ($auta as $a) {
+            Auto2::insert([
                 "jmeno" => $a["name"],
                 "typ" => $a["type"],
                 "zavodnik" => $a["zavodnik"],
