@@ -7,20 +7,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/auta1', [PageController::class, 'ukazIndex']) ->name("auta1.route");
 
-Route::get("/carModel/{id}", function (int $id) {
+// Route::get("/carModel/{id}", function (int $id) {
 
-    $auta = Auto::find($id);
+//     $auta = Auto::find($id);
 
-    if($auta === null)
-    {
-        return abort(404);
-    }
+//     if($auta === null)
+//     {
+//         return abort(404);
+//     }
 
-    //$typ = Typ::find($pokemon->druh);
+//     //$typ = Typ::find($pokemon->druh);
 
-return view('carModel',["aut" => $auta/*, 'typ' => $typ*/]);
 
-})->name("carModel");
+// return view('carModel',["aut" => $auta/*, 'typ' => $typ*/]);
+
+// })->name("carModel");
 
 
 
