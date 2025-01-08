@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('auto2', function (Blueprint $table) {
+        Schema::create('auta2', function (Blueprint $table) {
             $table->id();
-            $table->string('jmeno')->unique();
+            $table->string('jmeno');
             $table->unsignedBigInteger('typ');
             $table->string('zavodnik')->default("ne");
             $table->unsignedBigInteger('pocet_poharu')->default(0);
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('auto2');
+        Schema::dropIfExists('auta2');
     }
 };

@@ -20,36 +20,17 @@
         </section>
         <hr>
         <section id="galerie">
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
+            @foreach ($poleHry as $auto)
+                <div class="karta">
+                    <img
+                            src="img/{{$auto->id}}.png"
+                            alt="{{$auto ->jmeno}}"
+                        >
+                    <a href="{{ route('carModel.route', ['id' => $auto->id])}}">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            @endforeach
         </section>
 
     </main>

@@ -13,7 +13,7 @@ class vytvorTypy extends Seeder
      */
     public function run(): void
     {
-        $typy = [
+        $poleTypy = [
             ["normální", "Gray"],
             ["sportovní", "Orange"],
             ["off-road", "Blue"],
@@ -21,7 +21,7 @@ class vytvorTypy extends Seeder
             ["4x4", "Purple"],
         ];
 
-        foreach($typy as $typ)
+        foreach($poleTypy as $typ)
         {
             DB::table("typy")->insert([
                 "nazev" => $typ[0],

@@ -1,41 +1,22 @@
 <x-guest-layout>
-<main>
+    <main>
         <section id="text">
             <h1>Auta 3</h1>
             <p>Lore filmu.</p>
         </section>
         <hr>
         <section id="galerie">
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="karta">
-                <img src="../img/ilustracniObrazek.jpeg" alt="car">
-                <a href="{{ route('carModel.route') }}">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
+            @foreach ($poleAuta3 as $auto)
+                <div class="karta">
+                    <img
+                            src="img/{{$auto->id}}.png"
+                            alt="{{$auto ->jmeno}}"
+                        >
+                    <a href="{{ route('carModel.route', ['id' => $auto->id])}}">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            @endforeach
         </section>
 
     </main>

@@ -7023,7 +7023,7 @@
             },
             "autoload": {
                 "files": [
-                    "./src/Adapters/Phpunit/Autoload.php"
+                    "./src/Adapters/Phpunit/ModelAuto1load.php"
                 ],
                 "psr-4": {
                     "NunoMaduro\\Collision\\": "src/"
@@ -7287,7 +7287,7 @@
             },
             "autoload": {
                 "files": [
-                    "src/Autoload.php"
+                    "src/ModelAuto1load.php"
                 ],
                 "psr-4": {
                     "Pest\\Arch\\": "src/"
@@ -7363,7 +7363,7 @@
             },
             "autoload": {
                 "files": [
-                    "src/Autoload.php"
+                    "src/ModelAuto1load.php"
                 ],
                 "psr-4": {
                     "Pest\\Laravel\\": "src/"

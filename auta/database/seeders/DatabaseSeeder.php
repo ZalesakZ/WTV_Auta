@@ -23,6 +23,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             vytvorTypy::class,
             vytvorAuta::class,
+            vytvorAuta2::class,
+            vytvorAuta3::class,
+            vytvorHry::class,
+            vytvorSerialy::class,
+
         ]);
     }
 }

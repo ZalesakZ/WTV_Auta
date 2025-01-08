@@ -6,7 +6,7 @@
         </section>
         <hr>
         <section id="galerie">
-            @foreach ($auta as $auto)
+            @foreach ($poleAuta2 as $auto)
                 <div class="karta">
                     <img
                             src="img/{{$auto->id}}.png"

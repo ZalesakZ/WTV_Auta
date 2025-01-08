@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Auto2 extends Model
+class ModelHry extends Model
 {
-    protected $table = "auto2";
+    protected $table = "hry";
     protected $fillable = ["jmeno", "barva", "typ", "zavodnik", "pocet_poharu", "historie", "auta1", "auta2", "auta3", "serialy", "hry"];
 
     public function typ()
     {
-        return $this->belongsTo(Typ::class, 'druh', 'id');
+        return $this->belongsTo(ModelTypy::class, 'druh', 'id');
     }
 }
