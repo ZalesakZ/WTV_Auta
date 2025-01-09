@@ -12,4 +12,8 @@ class ModelTypy extends Model
     {
         return $this->hasMany(ModelAuto1::class, 'druh', 'id');
     }
+    public function ratings()
+    {
+        return $this->hasMany('App\Models\Rating');
+    }
 }

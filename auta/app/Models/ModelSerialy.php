@@ -13,4 +13,8 @@ class ModelSerialy extends Model
     {
         return $this->belongsTo(ModelTypy::class, 'druh', 'id');
     }
+    public function ratings()
+    {
+        return $this->hasMany('App\Models\Rating');
+    }
 }
