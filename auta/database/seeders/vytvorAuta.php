@@ -21,7 +21,7 @@ class vytvorAuta extends Seeder
         ];
 
         foreach ($poleAuta as $a) {
-            ModelAuto::insert([
+            ModelAuto1::insert([
                 "jmeno" => $a["name"],
                 "typ" => $a["type"],
                 "zavodnik" => $a["zavodnik"],
