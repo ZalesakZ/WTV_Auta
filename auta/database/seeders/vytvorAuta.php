@@ -14,16 +14,16 @@ class vytvorAuta extends Seeder
     public function run(): void
     {
         $poleAuta = [
-            ["name" => "Blesk McQueen", "type" => 2, "zavodnik" => "ano", "pocet_poharu" => 50, "historie" => "blesk info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
-            ["name" => "Burák", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0,"historie" => "Burák info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
-            ["name" => "Sally Carrera", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0,"historie" => "Sally Carrera info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
-            ["name" => "Doktor Hudson", "type" => 1, "zavodnik" => "ne", "pocet_poharu" => 0, "historie" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
+            ["jmeno" => "Blesk McQueen", "typ" => "typ1", "zavodnik" => true, "pocet_poharu" => 50, "historie" => "blesk info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
+            ["jmeno" => "Burák Příjmení", "typ" => "typ2", "zavodnik" => false, "pocet_poharu" => 0,"historie" => "Burák info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
+            ["jmeno" => "Sally Carrera", "typ" => "typ3", "zavodnik" => false, "pocet_poharu" => 0,"historie" => "Sally Carrera info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
+            ["jmeno" => "Doktor Hudson", "typ" => "typ4", "zavodnik" => false, "pocet_poharu" => 0, "historie" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
         ];
 
         foreach ($poleAuta as $a) {
             ModelAuto1::insert([
-                "jmeno" => $a["name"],
-                "typ" => $a["type"],
+                "jmeno" => $a["jmeno"],
+                "typ" => $a["typ"],
                 "zavodnik" => $a["zavodnik"],
                 "pocet_poharu" => $a["pocet_poharu"],
                 "historie" => $a["historie"],

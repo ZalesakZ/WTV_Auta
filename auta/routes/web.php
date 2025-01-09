@@ -29,7 +29,7 @@ Route::get("/carModel/{id}", function (int $id) {
     return view('carModel',["poleAuta" => $poleAuta]);
 
 
-})->name("carModel");
+})->name("carModel.route");
 
 
 Route::get('/', function () {
@@ -37,7 +37,8 @@ Route::get('/', function () {
 })->name('welcome.route');
 
 
-Route::view('/carModel', 'carModel')->name('carModel.route');
+//Route::view('/carModel', 'carModel')->name('carModel.route');
+
 Route::view('/top', 'top')->name('top.route');
 
 

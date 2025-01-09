@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('auta3', function (Blueprint $table) {
             $table->id();
             $table->string('jmeno');
-            $table->unsignedBigInteger('typ');
-            $table->string('zavodnik')->default("ne");
+            $table->string('typ');
+            $table->boolean("zavodnik")->default(false);
             $table->unsignedBigInteger('pocet_poharu')->default(0);
             $table->string('historie')->nullable();
             $table->boolean("auta1")->default(false);
@@ -23,11 +23,10 @@ return new class extends Migration
             $table->boolean("auta3")->default(false);
             $table->boolean("serialy")->default(false);
             $table->boolean("hry")->default(false);
-            
+
             $table->timestamps();
 
             // Foreign keys
-            $table->foreign('typ')->on('typy')->references('id');
         });
     }
 

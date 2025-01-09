@@ -20,16 +20,16 @@
             <nav>
                 <a href="{{ route('welcome.route') }}"><i class="fa-solid fa-house-chimney"></i></a>
                 <div class="menu">
-                    <a href="#" class="aktivni">Filmy</a>
-                    <div class="seznam">
-                        <a href="{{ route('auta1.route') }}" class="">Auta 1</a>
-                        <a href="{{ route('auta2.route') }}" class="">Auta 2</a>
-                        <a href="{{ route('auta3.route') }}" class="">Auta 3</a>
+                    <a href="{{ route('welcome.route') }}" class="{{ request()->routeIs('welcome.route', 'auta1.route', 'auta2.route', 'auta3.route') ? 'aktivni' : '' }}">Filmy</a>
+                        <div class="seznam">
+                            <a href="{{ route('auta1.route') }}" class="{{ request()->routeIs('auta1.route') ? 'aktivni' : '' }}">Auta 1</a>
+                            <a href="{{ route('auta2.route') }}" class="{{ request()->routeIs('auta2.route') ? 'aktivni' : '' }}">Auta 2</a>
+                            <a href="{{ route('auta3.route') }}" class="{{ request()->routeIs('auta3.route') ? 'aktivni' : '' }}">Auta 3</a>
+                        </div>
                     </div>
-                </div>
-                <a href="{{ route('hry.route') }}" class="">Hry</a>
-                <a href="{{ route('serialy.route') }}" class="">Seriály</a>
-                <a href="{{ route('top.route') }}" class="">Síň slávy</a>
+                <a href="{{ route('hry.route') }}" class="{{ request()->routeIs('hry.route') ? 'aktivni' : '' }}">Hry</a>
+                <a href="{{ route('serialy.route') }}" class="{{ request()->routeIs('serialy.route') ? 'aktivni' : '' }}">Seriály</a>
+                <a href="{{ route('top.route') }}" class="{{ request()->routeIs('top.route') ? 'aktivni' : '' }}">Síň slávy</a>
             </nav>
         </div>
         <div class="obsah">
