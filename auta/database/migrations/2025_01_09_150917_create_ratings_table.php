@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ratings', function (Blueprint $table) {
+        Schema::create('rating', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
             $table->integer('product_id');
             $table->integer('rating');
+            $table->text('comment');
+            $table->integer('status');
             $table->timestamps();
         });
     }

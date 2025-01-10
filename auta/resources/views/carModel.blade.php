@@ -18,5 +18,6 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
             </div>
+            @livewire('product-ratings', ['product' => $poleAuta], key($poleAuta->id))
         </main>
 </x-guest-layout>
