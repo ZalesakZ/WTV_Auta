@@ -1,5 +1,7 @@
 <x-app-layout>
-    <x-slot name="header">
+    <h1>Jste registrováni, klikněte zde pro navrácení na domovskou obrazovku: <a href="{{ route(('welcome.route')) }}">Zpět<i class="fa-solid fa-house-chimney"></i></a></h1>
+    
+    <!-- <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
@@ -11,5 +13,5 @@
                 <x-welcome />
             </div>
         </div>
-    </div>
+    </div> -->
 </x-app-layout>

@@ -16,9 +16,9 @@ Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3.route"
 Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry.route");
 Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.route");
 
-Route::get("/carModel/{id}", function (int $id) {
+Route::get("/carModel/{ID_obrazku}", function (int $ID_obrazku) {
 
-    $poleAuta = ModelAuto1::find($id);
+    $poleAuta = ModelAuto1::find($ID_obrazku);
 
     if($poleAuta === null)
     {
@@ -32,13 +32,9 @@ Route::get("/carModel/{id}", function (int $id) {
 })->name("carModel.route");
 
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome.route');
 
-
-//Route::view('/carModel', 'carModel')->name('carModel.route');
-
+Route::view('/', 'welcome')->name('welcome.route');
+Route::view('/filmy', 'filmy')->name('filmy.route');
 Route::view('/top', 'top')->name('top.route');
 
 

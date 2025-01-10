@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('auta3', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('ID_obrazku')->default(0);
             $table->string('jmeno');
             $table->string('typ');
             $table->boolean("zavodnik")->default(false);

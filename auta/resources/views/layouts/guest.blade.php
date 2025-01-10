@@ -1,4 +1,4 @@
-<link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="stylesheet" href={{ asset ("css/style.css") }}>
         <link rel="stylesheet" href={{ asset ('css/topStyle.css') }}>
@@ -18,9 +18,9 @@
 <header>
         <div>
             <nav>
-                <a href="{{ route('welcome.route') }}"><i class="fa-solid fa-house-chimney"></i></a>
+                <a href="{{ route('welcome.route') }}" class="{{ request()->routeIs('welcome.route') ? 'aktivni' : '' }}"><i class="fa-solid fa-house-chimney"></i></a>
                 <div class="menu">
-                    <a href="{{ route('welcome.route') }}" class="{{ request()->routeIs('welcome.route', 'auta1.route', 'auta2.route', 'auta3.route') ? 'aktivni' : '' }}">Filmy</a>
+                    <a href="#" class="{{ request()->routeIs('auta1.route', 'auta2.route', 'auta3.route') ? 'aktivni' : '' }}">Filmy</a>
                         <div class="seznam">
                             <a href="{{ route('auta1.route') }}" class="{{ request()->routeIs('auta1.route') ? 'aktivni' : '' }}">Auta 1</a>
                             <a href="{{ route('auta2.route') }}" class="{{ request()->routeIs('auta2.route') ? 'aktivni' : '' }}">Auta 2</a>

@@ -23,10 +23,10 @@
             @foreach ($poleHry as $auto)
                 <div class="karta">
                     <img
-                            src="img/{{$auto->id}}.png"
+                            src="img/{{$auto->ID_obrazku}}.png"
                             alt="{{$auto ->jmeno}}"
                         >
-                    <a href="{{ route('carModel.route', ['id' => $auto->id])}}">
+                    <a href="{{ route('carModel.route', ['ID_obrazku' => $auto->ID_obrazku])}}">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </div>
