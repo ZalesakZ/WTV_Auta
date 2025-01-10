@@ -11,7 +11,7 @@ class ModelAuto1 extends Model
 
     public function typ()
     {
-        return $this->belongsTo(ModelTypy::class, 'druh', 'id');
+        return $this->belongsTo(ModelTypy::class, 'typ', 'id');
     }
     public function ratings()
     {
