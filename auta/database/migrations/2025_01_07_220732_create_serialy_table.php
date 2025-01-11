@@ -13,18 +13,8 @@ return new class extends Migration
     {
         Schema::create('serialy', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('ID_obrazku')->default(0);
-            $table->string('jmeno');
-            $table->string('typ');
-            $table->boolean("zavodnik")->default(false);
-            $table->unsignedBigInteger('pocet_poharu')->default(0);
-            $table->string('historie')->nullable();
-            $table->boolean("auta1")->default(false);
-            $table->boolean("auta2")->default(false);
-            $table->boolean("auta3")->default(false);
-            $table->boolean("serialy")->default(false);
-            $table->boolean("hry")->default(false);
-
+            $table->unsignedBigInteger('fixni_ID')->unique();
+           
             $table->timestamps();
 
             // Foreign keys
