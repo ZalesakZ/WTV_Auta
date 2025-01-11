@@ -3,7 +3,7 @@
         <section id="text">
             <h1>Seriály</h1>
             <div>
-                <h3>Burákovi povídačky</h3>
+                <h3>Burákovy povídačky</h3>
                 <p>Lore seriálu.</p>
             </div>
             <div>
