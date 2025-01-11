@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             vytvorAuta3::class,
             vytvorHry::class,
             vytvorSerialy::class,
+            vytvorVsechnyAuta::class,
         ]);
     }
 }

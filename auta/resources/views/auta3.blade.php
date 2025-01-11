@@ -9,7 +9,7 @@
             @foreach ($poleAuta3 as $auto)
                 <div class="karta">
                     <img
-                            src="img/{{$auto->ID_obrazkud}}.png"
+                            src="img/{{$auto->ID_obrazku}}.png"
                             alt="{{$auto ->jmeno}}"
                         >
                     <a href="{{ route('carModel.route', ['ID_obrazku' => $auto->ID_obrazku])}}">

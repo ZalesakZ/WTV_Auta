@@ -6,7 +6,7 @@ use App\Models\ModelAuto2;
 use App\Models\ModelAuto3;
 use App\Models\ModelHry;
 use App\Models\ModelSerialy;
-use App\Models\ModelTypy;
+use App\Models\ModelVsechnyAuta;
 
 use Illuminate\Support\Facades\Route;
 
@@ -18,15 +18,15 @@ Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.ro
 
 Route::get("/carModel/{ID_obrazku}", function (int $ID_obrazku) {
 
-    $poleAuta = ModelAuto1::find($ID_obrazku);
+    $poleVsechnyAuta = ModelVsechnyAuta::find($ID_obrazku);
 
-    if($poleAuta === null)
+    if($poleVsechnyAuta === null)
     {
         return abort(404);
     }
 
 
-    return view('carModel',["poleAuta" => $poleAuta]);
+    return view('carModel',["poleVsechnyAuta" => $poleVsechnyAuta]);
 
 
 })->name("carModel.route");
