@@ -15,7 +15,7 @@
             <section id="poddetail">
                 <ul>
                     <li>Typ: {{ $poleVsechnyAuta->typ }}</li>
-                    <li>Je závodník?: {{ $poleVsechnyAuta->zavodnik }}</li>
+                    <li>Je závodník: {{ $poleVsechnyAuta->zavodnik }}</li>
                     <li>Počet pohárů: {{ $poleVsechnyAuta->pocet_poharu }}</li>
                 </ul>
                 <p><strong>Objevilo se v těchto médiích:</strong></p>
