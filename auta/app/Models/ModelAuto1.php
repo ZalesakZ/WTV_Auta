@@ -10,7 +10,7 @@ class ModelAuto1 extends Model //model ModelAuto1 dědí z třídy Model, což j
     protected $table = "auta"; //určuje, že tento model je propojen s tabulkou auta
     // modifikátor přístupu protected zajišťuje bezpečnost a zároveň přístup k hodnotám v rámci dědičnosti
 
-    protected $fillable = ["ID_obrazku", "jmeno", "barva", "typ", "zavodnik", "pocet_poharu", "historie", "auta1", "auta2", "auta3", "serialy", "hry"];
+    protected $fillable = ["fixni_ID"];
     // protected $fillable definuje, které sloupce tabulky lze hromadně plnit pomocí metod jako create() nebo update()
     // sloupce v poli $fillable odpovídají sloupcům databázové tabulky
 
@@ -19,7 +19,7 @@ class ModelAuto1 extends Model //model ModelAuto1 dědí z třídy Model, což j
     //ve funkci typ je belongsTo
     public function typ()
     {
-        return $this->belongsTo(ModelTypy::class, 'typ', 'id');
+        return $this->belongsTo(ModelTypy::class, 'id');
         /*
         Tento vztah říká, že každý záznam z tabulky auta patří k jednomu záznamu v tabulce reprezentované modelem ModelTypy
         Metoda belongsTo obsahuje 3 parametry:

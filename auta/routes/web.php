@@ -23,13 +23,13 @@ Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry.route");
 Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.route");
 
 /*
- * Tato routa přijímá parametr ID_obrazku, což je identifikátor konkrétního auta
+ * Tato routa přijímá parametr fixni_ID, což je identifikátor konkrétního auta
  * S tímto ID hledáte v databázi auto ve modelu ModelVsechnyAuta
  * Pokud auto s tímto ID nenajdete vrátí null a stránka vrátí chybu 404
  * Pokud auto najdete, zavolá se view carModel, kde je auto předáno do šablony jako poleVsechnyAuta
 */
 
-Route::get("/carModel/{ID_obrazku}", function (int $ID_obrazku) {
+Route::get("/carModel/{fixni_ID}", function (int $fixni_ID) {
 
     $poleVsechnyAuta = ModelVsechnyAuta::find($fixni_ID);
 

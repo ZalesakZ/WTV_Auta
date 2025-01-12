@@ -26,17 +26,7 @@ class vytvorAuta extends Seeder
         foreach ($poleAuta as $a) { //foreach prochází každou položku v poli $poleAuta dočasně uloženou do proměnné $a
             //Laravel používá model ModelAuto1 k přímému vložení dat do tabulky auta1
             ModelAuto1::insert([ //metoda insert() přijímá pole s hodnotami sloupců, které se vloží jako nový řádek do tabulky
-                "ID_obrazku" => $a["ID_obrazku"], //např. do sloupce ID_obrazku je vložena hodnota ID_obrazku z $a
-                "jmeno" => $a["jmeno"],
-                "typ" => $a["typ"],
-                "zavodnik" => $a["zavodnik"],
-                "pocet_poharu" => $a["pocet_poharu"],
-                "historie" => $a["historie"],
-                "auta1" => $a["auta1"],
-                "auta2" => $a["auta2"],
-                "auta3" => $a["auta3"],
-                "serialy" => $a["serialy"],
-                "hry" => $a["hry"],
+                "fixni_ID" => $a["fixni_ID"] //např. do sloupce fixni_ID je vložena hodnota fixni_ID z $a
             ]);
         }
     }

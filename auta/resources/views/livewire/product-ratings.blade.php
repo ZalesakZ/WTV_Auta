@@ -6,7 +6,7 @@
                 <div class="w-full mt-16 md:mt-0">
                     <div class="relative z-10 h-auto p-4 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
                     <!--
-                    Když je uživatel přihlášen (@auth), zobrazí se mu formulář pro hodnocení
+                    Když je uživatel přihlášen (zavináčauth), zobrazí se mu formulář pro hodnocení
                     Pomocí Livewire se vyplňuje a odesílá hodnocení (hodnocení je spojeno s proměnnou $rating, a komentář je spojen s proměnnou $comment)
                     Když uživatel klikne na hvězdičky, hodnota hodnocení se automaticky aktualizuje díky wire:model
                     Odesláním formuláře (pomocí wire:submit.prevent="rate()") se odešle hodnocení na databázový server
@@ -17,11 +17,11 @@
                                     Rate this product
                                 </p>
                             </div>
-                            @if (session()->has('message'))
-                                <p class="text-xl text-gray-600 md:pr-16">
-                                    {{ session('message') }}
-                                </p>
-                            @endif
+                                @if (session()->has('message'))
+                                    <p class="text-xl text-gray-600 md:pr-16">
+                                        {{ session('message') }}
+                                    </p>
+                                @endif
                             @if($hideForm != true)
                             <!--
                             Hodnocení zajišťují hvězdičky
@@ -71,15 +71,15 @@
                                     </div>
                                 </form>
                             @endif
-                        @else
-                            <div>
-                                <div class="mb-8 text-center text-gray-600">
-                                    You need to login in order to be able to rate the product!
-                                </div>
-                                <a href="/register"
-                                    class="block px-5 py-2 mx-auto font-medium text-center text-gray-600 bg-white border rounded-lg shadow-sm focus:outline-none hover:bg-gray-100" 
-                                >Register</a>
-                            </div>
+                            @else
+                                <div>
+                                    <div class="mb-8 text-center text-gray-600">
+                                        You need to login in order to be able to rate the product!
+                                    </div>
+                                    <a href="/register"
+                                        class="block px-5 py-2 mx-auto font-medium text-center text-gray-600 bg-white border rounded-lg shadow-sm focus:outline-none hover:bg-gray-100" 
+                                    >Register</a>
+                                </div> 
                         @endauth
                     </div>
                 </div>
@@ -98,7 +98,7 @@
             </div>
             <div class="box-border flex grid flex-wrap justify-center gap-10 -mx-4 text-center text-indigo-900 lg:gap-16 lg:justify-start lg:text-left">
                 <!--
-                Používá se smyčka @forelse ($comments as $comment) k iteraci přes všechny komentáře
+                Používá se smyčka zavináčforelse ($comments as $comment) k iteraci přes všechny komentáře
                 Pro každý komentář se zobrazí hodnocení a text komentáře
                 Dále se zobrazuje uživatelské jméno komentujícího uživatele a jeho hodnocení
                 Pokud je uživatel admin nebo vlastník komentáře, má možnost tento komentář smazat
@@ -119,9 +119,10 @@
                             <div class="box-border mt-5 text-lg font-semibold text-indigo-900 uppercase">
                                 Rating: <strong>{{ $comment->rating }}</strong> ⭐
                                 @auth
-                                    @if(auth()->user()->id == $comment->user_id || auth()->user()->role->name == 'admin' ))
+                                    @if(auth()->user()->id == $comment->user_id || auth()->user()->role->name == 'admin')
                                         - <a wire:click.prevent="delete({{ $comment->id }})" class="text-sm cursor-pointer">Delete</a>
                                     @endif
+
                                 @endauth
                             </div>
                             <div class="box-border text-left text-gray-700" style="quotes: auto;">
@@ -131,14 +132,14 @@
                             </div>
                         </div>
                     </div>
-                @empty
-                <div class="flex col-span-1">
-                    <div class="relative px-4 mb-16 leading-6 text-left">
-                        <div class="box-border text-lg font-medium text-gray-600">
-                            No ratings
+                    @empty
+                    <div class="flex col-span-1">
+                        <div class="relative px-4 mb-16 leading-6 text-left">
+                            <div class="box-border text-lg font-medium text-gray-600">
+                                No ratings
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforelse
 
             </div>
