@@ -16,10 +16,11 @@ class vytvorAuta extends Seeder
         //Pole obsahuje několik záznamů, kde každý záznam reprezentuje řádek databázové tabulky; 
         //každý záznam má hodnoty odpovídající sloupcům v tabulce (např. jmeno, typ, zavodnik atd.)
         $poleAuta = [
-            ["ID_obrazku" => 1, "jmeno" => "Blesk McQueen", "typ" => "typ1", "zavodnik" => true, "pocet_poharu" => 50, "historie" => "blesk info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
-            ["ID_obrazku" => 2,"jmeno" => "Burák Příjmení", "typ" => "typ2", "zavodnik" => false, "pocet_poharu" => 0,"historie" => "Burák info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
-            ["ID_obrazku" => 3,"jmeno" => "Sally Carrera", "typ" => "typ3", "zavodnik" => false, "pocet_poharu" => 0,"historie" => "Sally Carrera info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
-            ["ID_obrazku" => 4,"jmeno" => "Doktor Hudson", "typ" => "typ4", "zavodnik" => false, "pocet_poharu" => 0, "historie" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
+            ["fixni_ID" => 1],
+            ["fixni_ID" => 2],
+            ["fixni_ID" => 3],
+            ["fixni_ID" => 4],
+       
         ];
 
         foreach ($poleAuta as $a) { //foreach prochází každou položku v poli $poleAuta dočasně uloženou do proměnné $a

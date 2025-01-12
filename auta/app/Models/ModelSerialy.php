@@ -7,12 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ModelSerialy extends Model
 {
     protected $table = "serialy";
-    protected $fillable = ["ID_obrazku", "jmeno", "barva", "typ", "zavodnik", "pocet_poharu", "historie", "auta1", "auta2", "auta3", "serialy", "hry"];
+    protected $fillable = ["fixni_ID"];
 
-    public function typ()
-    {
-        return $this->belongsTo(ModelTypy::class, 'druh', 'id');
-    }
     public function ratings()
     {
         return $this->hasMany('App\Models\Rating');

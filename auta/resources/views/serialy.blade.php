@@ -16,10 +16,10 @@
             @foreach ($poleSerialy as $auto)
                 <div class="karta">
                     <img
-                            src="img/{{$auto->ID_obrazku}}.png"
+                            src="img/{{$auto->fixni_ID}}.png"
                             alt="{{$auto ->jmeno}}"
                         >
-                    <a href="{{ route('carModel.route', ['ID_obrazku' => $auto->ID_obrazku])}}">
+                    <a href="{{ route('carModel.route', ['fixni_ID' => $auto->fixni_ID])}}">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </div>

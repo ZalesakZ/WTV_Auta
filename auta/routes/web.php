@@ -31,7 +31,7 @@ Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.ro
 
 Route::get("/carModel/{ID_obrazku}", function (int $ID_obrazku) {
 
-    $poleVsechnyAuta = ModelVsechnyAuta::find($ID_obrazku);
+    $poleVsechnyAuta = ModelVsechnyAuta::find($fixni_ID);
 
     if($poleVsechnyAuta === null)
     {

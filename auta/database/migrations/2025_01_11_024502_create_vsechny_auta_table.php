@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('vsechny_auta', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('ID_obrazku')->default(0);
+            $table->unsignedBigInteger('fixni_ID')->unique();
             $table->string('jmeno');
             $table->string('typ');
             $table->boolean("zavodnik")->default(false);
