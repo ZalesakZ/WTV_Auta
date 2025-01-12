@@ -12,6 +12,7 @@ use App\Models\ModelAuto3;
 use App\Models\ModelHry;
 use App\Models\ModelSerialy;
 use App\Models\ModelTypy;
+use App\Models\ModelVsechnyAuta;
 
 use Exception;
 use Illuminate\Http\Request;
@@ -51,6 +52,20 @@ class PageController extends Controller // PageController dědí od Controller
     {
         $poleSerialy = ModelSerialy::all();
         return view('serialy', ["poleSerialy" => $poleSerialy]);
+    }
+
+    public function topRated()
+    {
+        // Načte top 3 auta podle průměrného hodnocení
+        $topCars = ModelVsechnyAuta::with('rating')
+            ->withCount(['ratings as average_rating' => function ($query) {
+                $query->select(\DB::raw('avg(rating)'));
+            }])
+            ->orderByDesc('average_rating')
+            ->take(3)
+            ->get();
+
+        return view('top', compact('topCars'));
     }
     
 }

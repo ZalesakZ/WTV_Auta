@@ -13,4 +13,9 @@ class ModelAuto3 extends Model
     {
         return $this->hasMany('App\Models\Rating');
     }
+
+    public function getAverageRatingAttribute()
+    {
+        return $this->ratings()->avg('rating');
+    }
 }
