@@ -71,7 +71,6 @@
                                     </div>
                                 </form>
                             @endif
-<<<<<<< HEAD
                         @else
                             <div>
                                 <div class="mb-8 text-center text-gray-600">
@@ -81,17 +80,6 @@
                                     class="block px-5 py-2 mx-auto font-medium text-center text-gray-600 bg-white border rounded-lg shadow-sm focus:outline-none hover:bg-gray-100" 
                                 >Register</a>
                             </div>
-=======
-                            @else
-                                <div>
-                                    <div class="mb-8 text-center text-gray-600">
-                                        You need to login in order to be able to rate the product!
-                                    </div>
-                                    <a href="/register"
-                                        class="block px-5 py-2 mx-auto font-medium text-center text-gray-600 bg-white border rounded-lg shadow-sm focus:outline-none hover:bg-gray-100" 
-                                    >Register</a>
-                                </div> 
->>>>>>> 1d96d40e237461ba7dad2857e07246504fcd975c
                         @endauth
                     </div>
                 </div>
