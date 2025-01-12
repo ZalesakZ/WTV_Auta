@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('typ');
             $table->boolean("zavodnik")->default(false);
             $table->unsignedBigInteger('pocet_poharu')->default(0);
-            $table->string('historie')->nullable();
+            $table->string('info_o_autu')->nullable();
             $table->boolean("auta1")->default(false);
             $table->boolean("auta2")->default(false);
             $table->boolean("auta3")->default(false);
