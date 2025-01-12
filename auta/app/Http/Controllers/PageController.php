@@ -1,4 +1,8 @@
 <?php
+/*
+ * V souboru PageController.php jsou definovány funkce, které se používají k obsluze různých rout aplikace
+ * Tento kontroler načítá data z různých modelů a předává je do Blade šablon, které zobrazují obsah uživatelskému rozhraní
+*/
 
 namespace App\Http\Controllers;
 
@@ -12,8 +16,13 @@ use App\Models\ModelTypy;
 use Exception;
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class PageController extends Controller // PageController dědí od Controller
 {
+    /*
+     * Načítá všechna auta z tabulky spojené s modelem ModelAuto1 a předává je do Blade šablony auta1
+     * Načítá všechna auta pomocí ModelAuto1::all(), což znamená, že všechny záznamy v tabulce auta jsou vráceny jako kolekce (list/pole)
+     * returnem vrací data pod názvem poleAuta do šablony auta1
+    */
     public function ukazIndex()
     {
         $poleAuta = ModelAuto1::all();

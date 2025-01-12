@@ -3,7 +3,7 @@
             <div class="karta">
                 <h2>{{ $poleVsechnyAuta->jmeno }}</h2>
                 <img
-                    src="{{ asset("img/" . $poleVsechnyAuta->fixni_ID . ".png")}}"
+                    src='{{ asset("img/" . $poleVsechnyAuta->fixni_ID . ".png")}}'
                     alt="{{ $poleVsechnyAuta->nazev}}"
                 >
 
