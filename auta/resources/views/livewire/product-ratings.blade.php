@@ -78,7 +78,7 @@
                                 </div>
                                 <a href="/register"
                                     class="block px-5 py-2 mx-auto font-medium text-center text-gray-600 bg-white border rounded-lg shadow-sm focus:outline-none hover:bg-gray-100" 
-                                >Register</a>
+                                >Registrace</a>
                             </div>
                         @endauth
                     </div>
