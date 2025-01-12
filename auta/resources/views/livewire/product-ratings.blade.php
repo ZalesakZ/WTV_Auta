@@ -7,8 +7,8 @@
                     <div class="relative z-10 h-auto p-4 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
                         @auth
                             <div class="w-full space-y-5">
-                                <p class="font-medium text-blue-500 uppercase">
-                                    Rate this product
+                                <p class="font-medium text-red-700 uppercase">
+                                    Ohodnoťte auto:
                                 </p>
                             </div>
                             @if (session()->has('message'))
@@ -49,7 +49,7 @@
                                         </div>
                                     </div>
                                     <div class="block">
-                                        <button type="submit" class="w-full px-3 py-4 font-medium text-white bg-blue-600 rounded-lg">Rate</button>
+                                        <button type="submit" class="w-full px-3 py-4 font-medium text-white bg-red-700 rounded-lg">Hodnotit</button>
                                         @auth
                                             @if($currentId)
                                                 <button type="submit" class="w-full px-3 py-4 mt-4 font-medium text-white bg-red-400 rounded-lg" wire:click.prevent="delete({{ $currentId }})" class="text-sm cursor-pointer">Delete</button>
@@ -61,7 +61,7 @@
                         @else
                             <div>
                                 <div class="mb-8 text-center text-gray-600">
-                                    You need to login in order to be able to rate the product!
+                                    Pro hodnocení aut se musíte přihlásit!
                                 </div>
                                 <a href="/register"
                                     class="block px-5 py-2 mx-auto font-medium text-center text-gray-600 bg-white border rounded-lg shadow-sm focus:outline-none hover:bg-gray-100" 
