@@ -11,21 +11,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>test1</td>
-                    <td><img src="../img/ilustracniObrazek.jpeg" alt="test1"></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>test2</td>
-                    <td><img src="../img/ilustracniObrazek.jpeg" alt="test2"></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>test3</td>
-                    <td><img src="../img/ilustracniObrazek.jpeg" alt="test3"></td>
-                </tr>
+            @foreach ($topCars as $index => $car)
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $car->name }}</td>
+                        <td>{{ number_format($car->average_rating, 2) }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 

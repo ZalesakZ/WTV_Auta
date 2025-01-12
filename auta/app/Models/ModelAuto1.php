@@ -38,4 +38,9 @@ class ModelAuto1 extends Model //model ModelAuto1 dědí z třídy Model, což j
             'App\Models\Rating' → Model cílové tabulky ratings
         */
     }
+
+    public function getAverageRatingAttribute()
+    {
+        return $this->ratings()->avg('rating');
+    }
 }
