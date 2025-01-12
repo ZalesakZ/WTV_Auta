@@ -11,7 +11,7 @@
                     <li>Typ: {{ $poleVsechnyAuta->typ }}</li>
                     <li>Je závodník?: {{ $poleVsechnyAuta->zavodnik }}</li>
                     <li>Počet pohárů: {{ $poleVsechnyAuta->pocet_poharu }}</li>
-                    <li>Základní info: {{ $poleVsechnyAuta->historie }}</li>
+                    <li>Základní info: {{ $poleVsechnyAuta->info_o_autu }}</li>
                     <p>Objevilo se v těchto médiích?</p>
                     <li>Auta 1: {{ $poleVsechnyAuta->auta1 }}</li>
                     <li>Auta 2: {{ $poleVsechnyAuta->auta2 }}</li>

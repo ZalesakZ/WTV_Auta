@@ -21,7 +21,7 @@ Route::get('/auta2', [PageController::class, 'ukazIndex2']) ->name("auta2.route"
 Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3.route");
 Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry.route");
 Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.route");
-Route::get('/top', [PageController::class, 'topRated'])->name('top1.route');
+Route::get('/top', [PageController::class, 'topRated'])->name('top.route');
 
 /*
  * Tato routa přijímá parametr fixni_ID, což je identifikátor konkrétního auta
@@ -54,7 +54,6 @@ Route::get("/carModel/{fixni_ID}", function (int $fixni_ID) {
 */
 Route::view('/', 'welcome')->name('welcome.route');
 Route::view('/filmy', 'filmy')->name('filmy.route');
-Route::view('/top', 'top')->name('top.route');
 
 /*
  * Tato routa je chráněná autentizací a ověřením uživatele
