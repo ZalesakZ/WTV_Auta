@@ -91,8 +91,8 @@
         <div class="w-full px-20 mx-auto text-left md:px-10 max-w-7xl xl:px-16">
             <div class="box-border flex flex-col flex-wrap justify-center -mx-4 text-indigo-900">
                 <div class="relative w-full mb-12 leading-6 text-left xl:flex-grow-0 xl:flex-shrink-0">
-                    <h2 class="box-border mx-0 mt-0 font-sans text-4xl font-bold text-center text-indigo-900">
-                        Ratings
+                    <h2 class="box-border mx-0 mt-0 font-sans text-4xl font-bold text-center text-red-700">
+                        Hodnocení
                     </h2>
                 </div>
             </div>
@@ -125,7 +125,7 @@
 
                                 @endauth
                             </div>
-                            <div class="box-border text-left text-gray-700" style="quotes: auto;">
+                            <div class="box-border text-left text-red-700" style="quotes: auto;">
                                 <a href="{{ '@' . $comment->user->username }}">
                                     {{  $comment->user->name }}
                                 </a>
@@ -135,8 +135,8 @@
                     @empty
                     <div class="flex col-span-1">
                         <div class="relative px-4 mb-16 leading-6 text-left">
-                            <div class="box-border text-lg font-medium text-gray-600">
-                                No ratings
+                            <div class="box-border text-lg font-medium text-red-600">
+                                Žádná hodnocení
                             </div>
                         </div>
                     </div>
