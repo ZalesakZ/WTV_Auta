@@ -16,9 +16,9 @@ Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3.route"
 Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry.route");
 Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.route");
 
-Route::get("/carModel/{fixni_ID}", function (int $id) {
+Route::get("/carModel/{fixni_ID}", function (int $fixni_ID) {
 
-    $poleVsechnyAuta = ModelVsechnyAuta::find($id);
+    $poleVsechnyAuta = ModelVsechnyAuta::find($fixni_ID);
 
     if($poleVsechnyAuta === null)
     {
