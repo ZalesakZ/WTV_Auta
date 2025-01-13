@@ -1,5 +1,5 @@
 <x-app-layout>
-    <h1>Jste registrováni, klikněte zde pro navrácení na domovskou obrazovku: <a href="{{ route(('welcome.route')) }}">Zpět<i class="fa-solid fa-house-chimney"></i></a></h1>
+    <h1 style="margin-left: 10px;"><strong> Jste registrováni, klikněte zde pro navrácení na domovskou obrazovku: <a href="{{ route(('welcome.route')) }}">Zpět<i class="fa-solid fa-house-chimney"></i></a></strong></h1>
     
     <!-- <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">

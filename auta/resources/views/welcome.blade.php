@@ -9,9 +9,8 @@
 Tento kód umístí na stránku malý widget, který zobrazuje počet návštěvníků webu.-->
 
 <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
 <img src="https://hitwebcounter.com/counter/counter.php?page=18336723&style=0042&nbdigits=5&type=ip&initCount=0" 
-     title="Counter Widget" 
+     title="Počítadlo" 
      Alt="Visit counter For Websites"   
      border="0" /></a>                                    
                                     
