@@ -119,7 +119,7 @@
                             <div class="box-border mt-5 text-lg font-semibold text-indigo-900 uppercase">
                                 Rating: <strong>{{ $comment->rating }}</strong> ⭐
                                 @auth
-                                    @if(auth()->user()->id == $comment->user_id || auth()->user()->role->name == 'admin')
+                                    @if(auth()->user()->id == $comment->user_id || auth()->user()->name == 'admin')
                                         - <a wire:click.prevent="delete({{ $comment->id }})" class="text-sm cursor-pointer">Delete</a>
                                     @endif
 

@@ -12,12 +12,12 @@
             </thead>
             <tbody>
             @foreach ($topCars as $index => $car)
-                    <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $car->name }}</td>
-                        <td>{{ number_format($car->average_rating, 2) }}</td>
-                    </tr>
-                @endforeach
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ $car->jmeno }}</br>{{ number_format($car->average_rating, 2) }}</td>
+                            <td></td>
+                        </tr>
+                    @endforeach
             </tbody>
         </table>
 

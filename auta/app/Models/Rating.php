@@ -29,9 +29,7 @@ class Rating extends Model
      * V tomto případě to znamená, že comment (komentář) je jediný atribut, který může být při hromadném přiřazení nastaven
      * To znamená, že při vytváření nebo aktualizaci hodnocení bude možné nastavit pouze hodnotu pro comment bez obav z neúmyslného přepsání jiných citlivých polí
     */
-    protected $fillable = [
-        'comment'
-    ];
+    protected $fillable = ['product_id', 'rating'];
 
     // tento model definuje dva vztahy s jinými modely
 
@@ -50,8 +48,11 @@ class Rating extends Model
      * Tento vztah označuje, že každé hodnocení patří k produktu (autu)
      * V tomto případě model Product by mohl reprezentovat konkrétní objekt, který je hodnocen
     */
+
+
     public function product()
     {
-        return $this->belongsTo('App\Models\Product');
+        return $this->belongsTo(ModelVsechnyAuta::class, 'product_id'); // Správné mapování cizího klíče
     }
+
 }
