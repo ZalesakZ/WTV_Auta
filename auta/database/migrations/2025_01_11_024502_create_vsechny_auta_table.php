@@ -24,6 +24,7 @@ return new class extends Migration
             $table->boolean("auta3")->default(false);
             $table->boolean("serialy")->default(false);
             $table->boolean("hry")->default(false);
+            $table->float('average_rating')->default(0);
 
             $table->timestamps();
 

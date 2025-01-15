@@ -65,7 +65,7 @@ class PageController extends Controller // PageController dědí od Controller
             ->orderByDesc('average_rating')
             ->take(3)
             ->get();
-            //dump($topCars);
+
         return view('top', compact('topCars'));
        
     }

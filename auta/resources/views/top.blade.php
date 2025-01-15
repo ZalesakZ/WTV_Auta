@@ -26,11 +26,7 @@
                                 </td>
                             </tr>
                 @endforeach
-                {{ dump($car->average_rating) }}
-                {{ dump($topCars) }}
-                <td>{{ $car->average_rating }}</td>
-
-            
+                
             </tbody>
         </table>
 
