@@ -11,13 +11,26 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach ($topCars as $index => $car)
-                        <tr>
-                            <td>{{ $index + 1 }}</td>
-                            <td>{{ $car->jmeno }}</br>{{ number_format($car->average_rating, 2) }}</td>
-                            <td></td>
-                        </tr>
-                    @endforeach
+                @foreach ($topCars as $index => $car)
+                            <tr>
+                                <td>{{ $index + 1 }}</td>
+                                <td>
+                                    {{ $car->jmeno }}</br>
+                                    {{ number_format($car->average_rating, 2) }}
+                                </td>
+                                <td> 
+                                    <img
+                                        src="img/{{$car->fixni_ID}}.png"
+                                        alt="{{$car ->jmeno}}"
+                                    >
+                                </td>
+                            </tr>
+                @endforeach
+                {{ dump($car->average_rating) }}
+                {{ dump($topCars) }}
+                <td>{{ $car->average_rating }}</td>
+
+            
             </tbody>
         </table>
 

@@ -21,12 +21,7 @@ Route::get('/auta2', [PageController::class, 'ukazIndex2']) ->name("auta2.route"
 Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3.route");
 Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry.route");
 Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.route");
-<<<<<<< HEAD
-Route::get('/top', [PageController::class, 'topRated']) ->name("top.route");
-
-=======
-Route::get('/top', [PageController::class, 'topRated'])->name('top.route');
->>>>>>> cff4c54f1ea5d422b8a21e46f1ef64abd8e8e884
+Route::get('/top', [PageController::class, 'topRated']) ->name('top.route');
 
 /*
  * Tato routa přijímá parametr fixni_ID, což je identifikátor konkrétního auta

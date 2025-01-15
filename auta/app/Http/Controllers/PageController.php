@@ -57,14 +57,18 @@ class PageController extends Controller // PageController dědí od Controller
 
     public function topRated()
     {
-        $topCars = ModelVsechnyAuta::select('fixni_ID',"jmeno")
+        $topCars = ModelVsechnyAuta::with('ratings') // Načte všechny hodnocení pro každé auto
+            ->select('fixni_ID', 'jmeno')
             ->join('ratings', 'fixni_ID', '=', 'ratings.product_id')
-            ->groupBy('fixni_ID', 'product_id', "jmeno")
+            ->groupBy('fixni_ID', 'product_id', 'jmeno')
             ->selectRaw('AVG(ratings.rating) as average_rating')
             ->orderByDesc('average_rating')
             ->take(3)
             ->get();
-
+            //dump($topCars);
         return view('top', compact('topCars'));
+       
     }
+
+    
 }
