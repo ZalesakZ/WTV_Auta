@@ -16,7 +16,7 @@
                                 <td>{{ $index + 1 }}</td>
                                 <td>
                                     {{ $car->jmeno }}</br>
-                                    {{ number_format($car->average_rating, 2) }}
+                                    {{ number_format($car->average_rating, 1) }}⭐
                                 </td>
                                 <td> 
                                     <img

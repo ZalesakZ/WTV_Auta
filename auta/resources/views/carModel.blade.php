@@ -28,7 +28,8 @@
                 </ul>
                 <h3>Informace o autu:</h3>
                 <p>{{ $poleVsechnyAuta->info_o_autu }}</p>
-                <p>Průměrné hodnocení: {{ $poleVsechnyAuta->average_rating }}</p>
+                <p>Průměrné hodnocení: {{ number_format($poleVsechnyAuta->average_rating, 1) }}⭐</p>
+
             </section>
         </main>
         @livewire('product-ratings', ['product' => $poleVsechnyAuta], key($poleVsechnyAuta->id))
