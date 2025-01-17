@@ -1,19 +1,19 @@
 <x-guest-layout>
 <main>
-        <h1>Žebříček</h1>
+        <h1>Top 3 nejoblíbenější auta</h1>
         <br>
         <table>
             <thead>
                 <tr>
                     <th>Pořadí oblíbenosti</th>
-                    <th>Jméno auta</th>
+                    <th>Název a hodnocení auta</th>
                     <th>Obrázek</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($topCars as $index => $car)
                             <tr>
-                                <td>{{ $index + 1 }}</td>
+                                <td class="text-4xl">{{ $index + 1 }}.</td>
                                 <td>
                                     {{ $car->jmeno }}</br>
                                     {{ number_format($car->average_rating, 1) }}⭐

@@ -1,6 +1,5 @@
 table{
     width:100%;
-    min-height: 500px;
 }
    
 table, th, td {
@@ -13,17 +12,24 @@ thead{
     background-color: lightgray;
 }
 
+tr{
+    max-height: fit-content;
+}
+
 td{
+    font-size: x-large;
     width: 33%;
-    height: auto;
 
     align-items: center;
     justify-content: center;
 }
 
 td img{
-    width: 66%;
+    display: flex;
+    width: 45%;
     height: auto;
 
     margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
 }
