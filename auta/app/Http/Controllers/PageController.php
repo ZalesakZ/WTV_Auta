@@ -63,6 +63,7 @@ class PageController extends Controller // PageController dědí od Controller
             ->groupBy('fixni_ID', 'product_id', 'jmeno')
             ->selectRaw('AVG(ratings.rating) as average_rating')
             ->orderByDesc('average_rating')
+            ->orderBy('jmeno')
             ->take(3)
             ->get();
 

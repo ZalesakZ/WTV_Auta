@@ -15,16 +15,20 @@
             <section id="poddetail">
                 <ul>
                     <li>Typ: {{ $poleVsechnyAuta->typ }}</li>
-                    <li>Je závodník: {{ $poleVsechnyAuta->zavodnik }}</li>
-                    <li>Počet pohárů: {{ $poleVsechnyAuta->pocet_poharu }}</li>
+                    <li>
+                        Je závodník: {{ $poleVsechnyAuta->zavodnik ? '✅' : '❌'}}
+                        @if ($poleVsechnyAuta->zavodnik)
+                            <li>Počet pohárů: {{ $poleVsechnyAuta->pocet_poharu }}</li>
+                        @endif
+                    </li>
                 </ul>
                 <p><strong>Objevilo se v těchto médiích:</strong></p>
                 <ul>
-                    <li>Auta 1: {{ $poleVsechnyAuta->auta1 }}</li>
-                    <li>Auta 2: {{ $poleVsechnyAuta->auta2 }}</li>
-                    <li>Auta 3: {{ $poleVsechnyAuta->auta3 }}</li>
-                    <li>Hry: {{ $poleVsechnyAuta->hry }}</li>
-                    <li>Seriály: {{ $poleVsechnyAuta->serialy }}</li>
+                    <li>Auta 1: {{ $poleVsechnyAuta->auta1 ? '✅' : '❌'}}</li>
+                    <li>Auta 2: {{ $poleVsechnyAuta->auta2? '✅' : '❌' }}</li>
+                    <li>Auta 3: {{ $poleVsechnyAuta->auta3 ? '✅' : '❌'}}</li>
+                    <li>Hry: {{ $poleVsechnyAuta->hry ? '✅' : '❌'}}</li>
+                    <li>Seriály: {{ $poleVsechnyAuta->serialy? '✅' : '❌' }}</li>
                 </ul>
                 <h3>Informace o autu:</h3>
                 <p>{{ $poleVsechnyAuta->info_o_autu }}</p>

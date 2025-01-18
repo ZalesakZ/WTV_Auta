@@ -1,6 +1,6 @@
 <x-guest-layout>
 <main>
-        <h1>Top 3 nejoblíbenější auta</h1>
+        <h1 id="name">Top 3 nejoblíbenější auta</h1>
         <br>
         <table>
             <thead>

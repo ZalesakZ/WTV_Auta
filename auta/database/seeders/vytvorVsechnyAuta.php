@@ -14,10 +14,24 @@ class vytvorVsechnyAuta extends Seeder
     public function run(): void
     {
         $poleVsechnyAuta = [
-            ["fixni_ID" => 1, "jmeno" => "Blesk McQueen", "typ" => "typ1", "zavodnik" => true, "pocet_poharu" => 50, "info_o_autu" => "blesk info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false, "average_rating" => 0 ],
-            ["fixni_ID" => 2, "jmeno" => "Burák Příjmení", "typ" => "typ2", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Burák info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false, "average_rating" => 0 ],
-            ["fixni_ID" => 3, "jmeno" => "Sally Carrera", "typ" => "typ3", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Sally Carrera info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false, "average_rating" => 0 ],
-            ["fixni_ID" => 4, "jmeno" => "Doktor Hudson", "typ" => "typ4", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false, "average_rating" => 0 ],
+            ["fixni_ID" => 1, "jmeno" => "Blesk McQueen", "typ" => "Závodní", "zavodnik" => true, "pocet_poharu" => 50, "info_o_autu" => "blesk info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 2, "jmeno" => "Burák", "typ" => "Komický", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Burák info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 3, "jmeno" => "Sally Carrera", "typ" => "Stylový", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Sally Carrera info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false ],
+            ["fixni_ID" => 4, "jmeno" => "Doktor Hudson", "typ" => "Závodní", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 5, "jmeno" => "Frank", "typ" => "Pracovní", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 6, "jmeno" => "Fillmore", "typ" => "Hippie", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 7, "jmeno" => "Chick Hicks", "typ" => "Závodní", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 8, "jmeno" => "Luigi", "typ" => "typ4", "Mechanik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 9, "jmeno" => "Elvis", "typ" => "Stylový", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 10, "jmeno" => "Sheriff", "typ" => "Pracovní", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 11, "jmeno" => "Popemobile", "typ" => "Speciální", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 12, "jmeno" => "Papež", "typ" => "Speciální", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 13, "jmeno" => "Francesco Bernoulli", "typ" => "Závodní", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 14, "jmeno" => "Cruz Ramirezová", "typ" => "Závodní", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 15, "jmeno" => "Guido", "typ" => "Mechanik", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+            ["fixni_ID" => 16, "jmeno" => "Bourák", "typ" => "UFO", "zavodnik" => false, "pocet_poharu" => 0, "info_o_autu" => "Doktor Hudson info", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => false],
+
+
         ];
 
         foreach ($poleVsechnyAuta as $a) {
