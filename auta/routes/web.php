@@ -21,7 +21,7 @@ Route::get('/auta2', [PageController::class, 'ukazIndex2']) ->name("auta2_blade.
 Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3_blade.route");
 Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry_blade.route");
 Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy_blade.route");
-Route::get('/welcome', [PageController::class, 'ukazIndex6']) ->name("welcome_blade.route");
+Route::get('/', [PageController::class, 'ukazIndex6']) ->name("welcome_blade.route");
 Route::get('/top', [PageController::class, 'topRated']) ->name('top_blade.route');
 
 /*
