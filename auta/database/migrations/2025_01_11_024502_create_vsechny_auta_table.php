@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('fixni_ID')->unique();
             $table->string('jmeno');
             $table->string('typ');
-            $table->boolean('zavodnik')->default(false);
             $table->unsignedBigInteger('pocet_vyher')->default(0);
             $table->unsignedBigInteger('zavodni_cislo')->default(0);
             $table->string('model_auta');
@@ -26,7 +25,6 @@ return new class extends Migration
             $table->boolean('auta3')->default(false);
             $table->boolean('serialy')->default(false);
             $table->boolean('hry')->default(false);
-            $table->float('average_rating')->default(0);
 
             $table->timestamps();
 
