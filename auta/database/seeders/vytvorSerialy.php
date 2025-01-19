@@ -17,7 +17,13 @@ class vytvorSerialy extends Seeder
             ["fixni_ID" => 1],
             ["fixni_ID" => 2],
             ["fixni_ID" => 3],
-            ["fixni_ID" => 4],
+            ["fixni_ID" => 6],
+            ["fixni_ID" => 7],
+            ["fixni_ID" => 8],
+            ["fixni_ID" => 10],
+            ["fixni_ID" => 14],
+            ["fixni_ID" => 15],
+            ["fixni_ID" => 16],
         ];
 
         foreach ($poleSerialy as $a) {

@@ -11,7 +11,6 @@ use App\Models\ModelAuto2;
 use App\Models\ModelAuto3;
 use App\Models\ModelHry;
 use App\Models\ModelSerialy;
-use App\Models\ModelTypy;
 use App\Models\ModelVsechnyAuta;
 use App\Models\Rating;
 
@@ -28,31 +27,37 @@ class PageController extends Controller // PageController dědí od Controller
     public function ukazIndex()
     {
         $poleAuta = ModelAuto1::all();
-        return view('auta1', ["poleAuta" => $poleAuta]);
+        return view('auta1_blade', ["poleAuta" => $poleAuta]);
     }
 
     public function ukazIndex2()
     {
         $poleAuta2 = ModelAuto2::all();
-        return view('auta2', ["poleAuta2" => $poleAuta2]);
+        return view('auta2_blade', ["poleAuta2" => $poleAuta2]);
     }
 
     public function ukazIndex3()
     {
         $poleAuta3 = ModelAuto3::all();
-        return view('auta3', ["poleAuta3" => $poleAuta3]);
+        return view('auta3_blade', ["poleAuta3" => $poleAuta3]);
     }
 
     public function ukazIndex4()
     {
         $poleHry = ModelHry::all();
-        return view('hry', ["poleHry" => $poleHry]);
+        return view('hry_blade', ["poleHry" => $poleHry]);
     }
 
     public function ukazIndex5()
     {
         $poleSerialy = ModelSerialy::all();
-        return view('serialy', ["poleSerialy" => $poleSerialy]);
+        return view('serialy_blade', ["poleSerialy" => $poleSerialy]);
+    }   
+
+    public function ukazIndex6()
+    {
+        $poleVsechnyAuta = ModelVsechnyAuta::all();
+        return view('welcome_blade', ["poleVsechnyAuta" => $poleVsechnyAuta]); //view je blade
     }   
 
     public function topRated()
@@ -67,7 +72,7 @@ class PageController extends Controller // PageController dědí od Controller
             ->take(3)
             ->get();
 
-        return view('top', compact('topCars'));
+        return view('top_blade', compact('topCars'));
        
     }
 

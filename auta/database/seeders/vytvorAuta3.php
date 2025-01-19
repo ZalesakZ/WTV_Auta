@@ -18,6 +18,13 @@ class vytvorAuta3 extends Seeder
             ["fixni_ID" => 2],
             ["fixni_ID" => 3],
             ["fixni_ID" => 4],
+            ["fixni_ID" => 5],
+            ["fixni_ID" => 6],
+            ["fixni_ID" => 7],
+            ["fixni_ID" => 8],
+            ["fixni_ID" => 10],
+            ["fixni_ID" => 14],
+            ["fixni_ID" => 15],
         ];
 
         foreach ($poleAuta3 as $a) {

@@ -21,6 +21,8 @@
 
                     @endif
                     <li><b>Model auta:</b> {{ $poleVsechnyAuta->model_auta }}</li>
+                    <li><b>Originální dabing:</b> {{ $poleVsechnyAuta->dabing_EN }}</li>
+                    <li><b>Český dabing:</b> {{ $poleVsechnyAuta->dabing_CZ }}</li>
                 </ul>
                 <p><b>Objevilo se v těchto médiích:</b></p>
                 <ul>

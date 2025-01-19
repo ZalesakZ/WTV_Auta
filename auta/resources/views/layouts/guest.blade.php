@@ -23,7 +23,7 @@ Assety jsou odkazy na statické soubory jako CSS a JS
 <header>
         <div>
             <nav>
-                <a href="{{ route('welcome.route') }}" class="{{ request()->routeIs('welcome.route') ? 'aktivni' : '' }}"><i class="fa-solid fa-house-chimney"></i></a>
+                <a href="{{ route('welcome_blade.route') }}" class="{{ request()->routeIs('welcome_blade.route') ? 'aktivni' : '' }}"><i class="fa-solid fa-house-chimney"></i></a>
                 <!--
                 href pomocí rout odkazuje na konkrétní blady
 
@@ -35,16 +35,16 @@ Assety jsou odkazy na statické soubory jako CSS a JS
                 pokud není, vrátí se prázdný řetězec ''
                 -->
                 <div class="menu">
-                    <a href="#" class="{{ request()->routeIs('auta1.route', 'auta2.route', 'auta3.route') ? 'aktivni' : '' }}">Filmy</a>
+                    <a href="#" class="{{ request()->routeIs('auta1_blade.route', 'auta2_blade.route', 'auta3_blade.route') ? 'aktivni' : '' }}">Filmy</a>
                     <div class="seznam">
-                        <a href="{{ route('auta1.route') }}" class="{{ request()->routeIs('auta1.route') ? 'aktivni' : '' }}">Auta 1</a>
-                        <a href="{{ route('auta2.route') }}" class="{{ request()->routeIs('auta2.route') ? 'aktivni' : '' }}">Auta 2</a>
-                        <a href="{{ route('auta3.route') }}" class="{{ request()->routeIs('auta3.route') ? 'aktivni' : '' }}">Auta 3</a>
+                        <a href="{{ route('auta1_blade.route') }}" class="{{ request()->routeIs('auta1_blade.route') ? 'aktivni' : '' }}">Auta 1</a>
+                        <a href="{{ route('auta2_blade.route') }}" class="{{ request()->routeIs('auta2_blade.route') ? 'aktivni' : '' }}">Auta 2</a>
+                        <a href="{{ route('auta3_blade.route') }}" class="{{ request()->routeIs('auta3_blade.route') ? 'aktivni' : '' }}">Auta 3</a>
                     </div>
                 </div>
-                <a href="{{ route('hry.route') }}" class="{{ request()->routeIs('hry.route') ? 'aktivni' : '' }}">Hry</a>
-                <a href="{{ route('serialy.route') }}" class="{{ request()->routeIs('serialy.route') ? 'aktivni' : '' }}">Seriály</a>
-                <a href="{{ route('top.route') }}" class="{{ request()->routeIs('top.route') ? 'aktivni' : '' }}">Síň slávy</a>
+                <a href="{{ route('hry_blade.route') }}" class="{{ request()->routeIs('hry_blade.route') ? 'aktivni' : '' }}">Hry</a>
+                <a href="{{ route('serialy_blade.route') }}" class="{{ request()->routeIs('serialy_blade.route') ? 'aktivni' : '' }}">Seriály</a>
+                <a href="{{ route('top_blade.route') }}" class="{{ request()->routeIs('top_blade.route') ? 'aktivni' : '' }}">Síň slávy</a>
             </nav>
         </div>
         <div class="obsah">

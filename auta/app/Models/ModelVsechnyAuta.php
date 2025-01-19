@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ModelVsechnyAuta extends Model
 {
     protected $table = "vsechny_auta";
-    protected $fillable = ["fixni_ID", "jmeno", "barva", "typ", "pocet_vyher", "zavodni_cislo", "model_auta", "info_o_autu", "auta1", "auta2", "auta3", "serialy", "hry", "average_rating"];
+    protected $fillable = ["fixni_ID", "jmeno", "barva", "typ", "pocet_vyher", "zavodni_cislo", "model_auta", "dabing_EN", "dabing_CZ", "auta1", "auta2", "auta3", "serialy", "hry", "info_o_autu"];
 
     public function ratings()
     {

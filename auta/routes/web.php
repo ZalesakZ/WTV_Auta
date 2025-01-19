@@ -16,12 +16,13 @@ use Illuminate\Support\Facades\Route;
  * Každá z těchto cest se mapuje na metody v kontroleru PageController
  * Každá routa má definované vlastní jméno (např. auta1.route), které lze využít k snadné generaci URL v aplikaci 
 */
-Route::get('/auta1', [PageController::class, 'ukazIndex']) ->name("auta1.route");
-Route::get('/auta2', [PageController::class, 'ukazIndex2']) ->name("auta2.route");
-Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3.route");
-Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry.route");
-Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy.route");
-Route::get('/top', [PageController::class, 'topRated']) ->name('top.route');
+Route::get('/auta1', [PageController::class, 'ukazIndex']) ->name("auta1_blade.route");
+Route::get('/auta2', [PageController::class, 'ukazIndex2']) ->name("auta2_blade.route");
+Route::get('/auta3', [PageController::class, 'ukazIndex3']) ->name("auta3_blade.route");
+Route::get('/hry', [PageController::class, 'ukazIndex4']) ->name("hry_blade.route");
+Route::get('/serialy', [PageController::class, 'ukazIndex5']) ->name("serialy_blade.route");
+Route::get('/welcome', [PageController::class, 'ukazIndex6']) ->name("welcome_blade.route");
+Route::get('/top', [PageController::class, 'topRated']) ->name('top_blade.route');
 
 /*
  * Tato routa přijímá parametr fixni_ID, což je identifikátor konkrétního auta
@@ -30,7 +31,7 @@ Route::get('/top', [PageController::class, 'topRated']) ->name('top.route');
  * Pokud auto najdete, zavolá se view carModel, kde je auto předáno do šablony jako poleVsechnyAuta
 */
 
-Route::get("/carModel/{fixni_ID}", function (int $fixni_ID) {
+Route::get("/carModel_blade/{fixni_ID}", function (int $fixni_ID) {
 
     $poleVsechnyAuta = ModelVsechnyAuta::find($fixni_ID);
 
@@ -40,10 +41,10 @@ Route::get("/carModel/{fixni_ID}", function (int $fixni_ID) {
     }
 
 
-    return view('carModel',["poleVsechnyAuta" => $poleVsechnyAuta]);
+    return view('carModel_blade',["poleVsechnyAuta" => $poleVsechnyAuta]);
 
 
-})->name("carModel.route");
+})->name("carModel_blade.route");
 
 /*
  * Tyto routy vedou na statické stránky, které používají Blade šablony
@@ -52,8 +53,8 @@ Route::get("/carModel/{fixni_ID}", function (int $fixni_ID) {
  * /top → zobrazí pohled top
  * Každá routa má přiřazené jméno, což usnadňuje odkazování v aplikaci
 */
-Route::view('/', 'welcome')->name('welcome.route');
-Route::view('/filmy', 'filmy')->name('filmy.route');
+
+Route::view('/filmy', 'filmy_blade')->name('filmy_blade.route');
 
 /*
  * Tato routa je chráněná autentizací a ověřením uživatele

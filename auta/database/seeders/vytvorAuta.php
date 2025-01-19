@@ -26,13 +26,7 @@ class vytvorAuta extends Seeder
             ["fixni_ID" => 8],
             ["fixni_ID" => 9],
             ["fixni_ID" => 10],
-            ["fixni_ID" => 11],
-            ["fixni_ID" => 12],
-            ["fixni_ID" => 13],
-            ["fixni_ID" => 14],
             ["fixni_ID" => 15],
-            ["fixni_ID" => 16],
-       
         ];
 
         foreach ($poleAuta as $a) { //foreach prochází každou položku v poli $poleAuta dočasně uloženou do proměnné $a

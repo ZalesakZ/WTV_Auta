@@ -19,12 +19,14 @@ return new class extends Migration
             $table->unsignedBigInteger('pocet_vyher')->default(0);
             $table->unsignedBigInteger('zavodni_cislo')->default(0);
             $table->string('model_auta');
-            $table->string('info_o_autu')->nullable();
+            $table->string('dabing_EN');
+            $table->string('dabing_CZ');
             $table->boolean('auta1')->default(false);
             $table->boolean('auta2')->default(false);
             $table->boolean('auta3')->default(false);
             $table->boolean('serialy')->default(false);
             $table->boolean('hry')->default(false);
+            $table->longText('info_o_autu');
 
             $table->timestamps();
 
