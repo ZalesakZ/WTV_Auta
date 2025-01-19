@@ -96,7 +96,7 @@ Assety jsou odkazy na statické soubory jako CSS a JS
         @livewireScripts 
         <!-- livewireScripts je Blade direktiva, která načítá potřebné skripty pro Livewire (nástroj pro interaktivní komponenty v Laravelu)-->
         <footer>
-        <p>&copy; 2025 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 12. listopadu 2024</p>
+        <p>&copy; 2025 Disney & Pixar | Autoři: Vobruba, Zálešák, Kůřil | Poslední aktualizace: 20. ledna 2025</p>
         </footer>
     </body>
 </html>
