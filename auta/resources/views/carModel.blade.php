@@ -14,15 +14,15 @@
             </section>
             <section id="poddetail">
                 <ul>
-                    <li>Typ: {{ $poleVsechnyAuta->typ }}</li>
-                    <li>
-                        Je závodník: {{ $poleVsechnyAuta->zavodnik ? '✅' : '❌'}}
-                        @if ($poleVsechnyAuta->zavodnik)
-                            <li>Počet pohárů: {{ $poleVsechnyAuta->pocet_poharu }}</li>
-                        @endif
-                    </li>
+                    <li><b>Typ:</b> {{ $poleVsechnyAuta->typ }}</li>
+                    @if ($poleVsechnyAuta->typ == "Závodní")
+                        <li><b>Počet výher:</b> {{ $poleVsechnyAuta->pocet_vyher }}</li>
+                        <li><b>Závodní číslo:</b> {{ $poleVsechnyAuta->zavodni_cislo }}</li>
+
+                    @endif
+                    <li><b>Model auta:</b> {{ $poleVsechnyAuta->model_auta }}</li>
                 </ul>
-                <p><strong>Objevilo se v těchto médiích:</strong></p>
+                <p><b>Objevilo se v těchto médiích:</b></p>
                 <ul>
                     <li>Auta 1: {{ $poleVsechnyAuta->auta1 ? '✅' : '❌'}}</li>
                     <li>Auta 2: {{ $poleVsechnyAuta->auta2? '✅' : '❌' }}</li>

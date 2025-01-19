@@ -20,6 +20,18 @@ class vytvorAuta extends Seeder
             ["fixni_ID" => 2],
             ["fixni_ID" => 3],
             ["fixni_ID" => 4],
+            ["fixni_ID" => 5],
+            ["fixni_ID" => 6],
+            ["fixni_ID" => 7],
+            ["fixni_ID" => 8],
+            ["fixni_ID" => 9],
+            ["fixni_ID" => 10],
+            ["fixni_ID" => 11],
+            ["fixni_ID" => 12],
+            ["fixni_ID" => 13],
+            ["fixni_ID" => 14],
+            ["fixni_ID" => 15],
+            ["fixni_ID" => 16],
        
         ];
 
