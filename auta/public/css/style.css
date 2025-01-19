@@ -121,3 +121,8 @@ footer {
     padding: 6px;
     border-radius: 10px;
 }
+
+#text h3{
+    text-decoration: underline solid black;
+    font-size: large;
+}
