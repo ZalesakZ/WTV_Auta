@@ -5,7 +5,7 @@ Assety jsou odkazy na statické soubory jako CSS a JS
 -->
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="stylesheet" href={{ asset ("css/style.css") }}>
+        <link rel="stylesheet" href={{ asset ('css/style.css') }}>
         <link rel="stylesheet" href={{ asset ('css/topStyle.css') }}>
         <link rel="stylesheet" href={{ asset ('css/galeryStyle.css') }}>
         

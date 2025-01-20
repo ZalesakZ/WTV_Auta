@@ -29,11 +29,7 @@ class vytvorVsechnyAuta extends Seeder
             ["fixni_ID" => 13, "jmeno" => "Francesco Bernoulli", "typ" => "Závodní", "pocet_vyher" => 27, "zavodni_cislo" => 1, "model_auta" => "2009 Formula FB1 Prototype Racer", "dabing_EN" => "John Turturro", "dabing_CZ" => "Matěj Ruppert", "auta1" => false, "auta2" => true, "auta3" => false, "serialy" => false, "hry" => true, "info_o_autu" => "Francesco je hrdý italský závodník a věčný rival Bleska McQueena. S číslem 1 a elegancí formule je na závodní dráze téměř nepřekonatelný. Rád se chlubí svými dovednostmi a rychlostí."],
             ["fixni_ID" => 14, "jmeno" => "Cruz Ramirezová", "typ" => "Závodní", "pocet_vyher" => 46, "zavodni_cislo" => 51, "model_auta" => "2017 CRS Sports Coupe", "dabing_EN" => "Cristela Alonzo", "dabing_CZ" => "Vendula Příhodová", "auta1" => false, "auta2" => false, "auta3" => true, "serialy" => true, "hry" => true,"info_o_autu" => "Cruz je talentovaná závodnice, která se stala mentorem mladých jezdců. S číslem 51 na kapotě a odvahou čelit výzvám inspiruje ostatní svým příběhem a odhodláním."],
             ["fixni_ID" => 15, "jmeno" => "Guido", "typ" => "Mechanik", "pocet_vyher" => 0, "zavodni_cislo" => 0, "model_auta" => "Alza Tutto Forklift", "dabing_EN" => "Guido Quaroni", "dabing_CZ" => "Jiří Lábus", "auta1" => true, "auta2" => true, "auta3" => true, "serialy" => true, "hry" => true,"info_o_autu" => "Guido je rychlý a nadšený vysokozdvižný vozík, který je mistrem v přezouvání pneumatik. Přestože je malý, má obrovské nadšení pro závody a vždy chce být součástí akce."],
-            ["fixni_ID" => 16, "jmeno" => "Bourák", "typ" => "UFO", "pocet_vyher" => 0, "zavodni_cislo" => 0,  "model_auta" => "UFO", "dabing_EN" => "Larry the Cable Guy", "dabing_CZ" => "Petr Novotný", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => true,"info_o_autu" => "Bourák je tajemné UFO, které zbožňuje objevování neznámého. Často se objevuje nečekaně a fascinuje ostatní svými neobvyklými schopnostmi a záhadným původem.
-
-"],
-// 
-
+            ["fixni_ID" => 16, "jmeno" => "Bourák", "typ" => "UFO", "pocet_vyher" => 0, "zavodni_cislo" => 0,  "model_auta" => "UFO", "dabing_EN" => "Larry the Cable Guy", "dabing_CZ" => "Petr Novotný", "auta1" => false, "auta2" => false, "auta3" => false, "serialy" => true, "hry" => true,"info_o_autu" => "Bourák je tajemné UFO, které zbožňuje objevování neznámého. Často se objevuje nečekaně a fascinuje ostatní svými neobvyklými schopnostmi a záhadným původem."],
         ];
 
         foreach ($poleVsechnyAuta as $a) {

@@ -22,6 +22,5 @@
                 </div>
             @endforeach
         </section>
-
     </main>
 </x-guest-layout>

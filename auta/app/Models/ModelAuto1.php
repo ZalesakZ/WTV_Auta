@@ -17,9 +17,7 @@ class ModelAuto1 extends Model //model ModelAuto1 dědí z třídy Model, což j
 
     //modely umožňují definovat vztahy mezi tabulkami pomocí metod, které vracejí instance vztahových metod, např. belongsTo nebo hasMany
     //ve funkci typ je belongsTo
-    public function typ()
-    {
-        return $this->belongsTo(ModelTypy::class, 'id');
+    
         /*
         Tento vztah říká, že každý záznam z tabulky auta patří k jednomu záznamu v tabulce reprezentované modelem ModelTypy
         Metoda belongsTo obsahuje 3 parametry:
@@ -27,7 +25,6 @@ class ModelAuto1 extends Model //model ModelAuto1 dědí z třídy Model, což j
             'typ' → Sloupec v tabulce auta, který ukládá ID cílového záznamu
             'id' → Sloupec v tabulce typy, podle kterého se hledá odpovídající záznam
         */
-    }
     //funkce ratings využívá funkci hasMany
     public function ratings()
     {

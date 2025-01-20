@@ -9,11 +9,9 @@
         <br>
         <p>Svět Pixar aut není pouze o rychlých autech a divokých závodech, ale také o tom, jak auta – stejně jako lidé – čelí výzvám, procházejí krizemi a nakonec nacházejí cestu k osobnímu růstu. Je to místo, kde se na závodní dráze nebo ve městech jako Radiator Springs setkávají příběhy o odhodlání, přátelství, lásce a síle změny. Tento svět ukazuje, že opravdová hodnota není v tom, kolik pohárů máte na polici, ale v tom, co se naučíte na své cestě a jak se tyto lekce promítnou do vztahů s ostatními.</p>
     </main>
-
 <!--Tento kód je pro přidání počítadla návštěvnosti na stránce. Je to externí služba, která generuje widget s počtem návštěvníků stránky.
 Tento kód umístí na stránku malý widget, který zobrazuje počet návštěvníků webu.-->
-
-<main>
+    <main>
         <section id="text">
             <h1>Všechna auta</h1>
         </section>
@@ -31,13 +29,10 @@ Tento kód umístí na stránku malý widget, který zobrazuje počet návštěv
                 </div>
             @endforeach
         </section>
-
     </main>
-
     Počítadlo návštěvníků: 
     <img src="https://hitwebcounter.com/counter/counter.php?page=18551476&style=0042&nbdigits=5&type=page&initCount=0"    
         title="Počítadlo" 
         Alt="Visit counter For Websites"   
-        border="0" /></a>                                                                     
-                                                                            
+    >                                                                                                                                    
 </x-guest-layout>

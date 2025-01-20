@@ -1,5 +1,5 @@
 <x-guest-layout>
-<main>
+    <main>
         <section id="text">
             <h1>Top 3 nejoblíbenější auta</h1>
         </section>
@@ -14,23 +14,21 @@
             </thead>
             <tbody>
                 @foreach ($topCars as $index => $car)
-                            <tr>
-                                <td class="text-4xl">{{ $index + 1 }}.</td>
-                                <td>
-                                    {{ $car->jmeno }}</br>
-                                    {{ number_format($car->average_rating, 1) }}⭐
-                                </td>
-                                <td> 
-                                    <img
-                                        src="img/{{$car->fixni_ID}}.png"
-                                        alt="{{$car ->jmeno}}"
-                                    >
-                                </td>
-                            </tr>
+                    <tr>
+                        <td class="text-4xl">{{ $index + 1 }}.</td>
+                        <td>
+                            {{ $car->jmeno }}</br>
+                            {{ number_format($car->average_rating, 1) }}⭐
+                        </td>
+                        <td> 
+                            <img
+                                src="img/{{$car->fixni_ID}}.png"
+                                alt="{{$car ->jmeno}}"
+                            >
+                        </td>
+                    </tr>
                 @endforeach
-                
             </tbody>
         </table>
-
     </main>
 </x-guest-layout>

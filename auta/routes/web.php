@@ -32,18 +32,12 @@ Route::get('/top', [PageController::class, 'topRated']) ->name('top_blade.route'
 */
 
 Route::get("/carModel_blade/{fixni_ID}", function (int $fixni_ID) {
-
     $poleVsechnyAuta = ModelVsechnyAuta::find($fixni_ID);
-
     if($poleVsechnyAuta === null)
     {
         return abort(404);
     }
-
-
     return view('carModel_blade',["poleVsechnyAuta" => $poleVsechnyAuta]);
-
-
 })->name("carModel_blade.route");
 
 /*
