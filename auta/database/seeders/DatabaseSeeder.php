@@ -3,13 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-/*
-* DatabaseSeeder je hlavní třída, která diriguje všechny ostatní seedery.
-* Umožňuje spustit více seedovacích tříd najednou, aniž by se musely volat ručně.
-*/
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,16 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //Tady je to zakomentované, protože aplikace nepoužívá defaultní tabulku users nebo nepotřebuje testovacího uživatele
-        /*
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-        */
-        $this->call([ //volá metodu run() každého uvedeného seederu
-            vytvorAuta::class, //třída vytvorAuta obsahuje data pro tabulku auta, stejně i ostatní seedery naplní tabulky, které odpovídají jejich názvům
+        $this->call([ 
+            vytvorAuta::class,
             vytvorAuta2::class,
             vytvorAuta3::class,
             vytvorHry::class,

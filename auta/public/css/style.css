@@ -1,4 +1,3 @@
-/* Celkové nastavení pro reset */
 * {
     margin: 0;
     padding: 0;
@@ -81,7 +80,7 @@ footer {
 }
 
 .login hr {
-    border: 0;/*reset nastavení*/
+    border: 0;
     border-top: 1px solid white;
     margin: 3px 0;
 }
@@ -93,7 +92,7 @@ footer {
 }
 
 .seznam {
-    display: none; /*skrytí prvků*/
+    display: none; 
     position: absolute;
     background-color: black;
     min-width: 95px;
@@ -104,11 +103,11 @@ footer {
 }
 
 .seznam a {
-    display: block;/*tlačítka zarovnána v bloku*/
+    display: block;
 }
 
 .menu:hover .seznam {
-    display: block; /*zobrazit tlačítka*/
+    display: block; 
 }
 
 #text div{

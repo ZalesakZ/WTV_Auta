@@ -1,5 +1,5 @@
-<x-guest-layout> <!-- Načte layout z guest.blase.php-->
-    <main> <!--Hlavní obsah stránky-->
+<x-guest-layout> 
+    <main> 
         <section id="text">
             <h1>Auta 1</h1>
             <p>Film Auta (2006) od Pixaru je animovaný příběh o závodním autu Bleskovi McQueenovi, které se na své cestě do nového závodního závodu ztratí a skončí v zapadlé vesnici jménem Radiator Springs. Zde se Blesk setká s řadou neobvyklých postav, jako je Sally Carrera, Filmore, Burák, Luigi a mnoho dalších, kteří mu ukážou, že život není jen o rychlosti a závodech, ale také o hodnotách jako přátelství, laskavost a rodina.</p>
@@ -10,11 +10,6 @@
         </section>
         <hr>
         <section id="galerie">
-        <!--
-        Pomocí foreach cyklu se prochází všechny auta, která jsou v proměnné $poleAuta, což je kolekce dat, která byla předána
-        z PageControlleru z modelu ModelAuto1
-        Pro každé auto (uložené jako $auto) se vytvoří HTML blok s obrázkem auta a odkazem
-        -->
             @foreach ($poleAuta as $auto)
                 <div class="karta">
                     <img

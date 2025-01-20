@@ -5,12 +5,6 @@
 
                 <div class="w-full mt-16 md:mt-0">
                     <div class="relative z-10 h-auto p-4 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
-                    <!--
-                    Když je uživatel přihlášen (zavináčauth), zobrazí se mu formulář pro hodnocení
-                    Pomocí Livewire se vyplňuje a odesílá hodnocení (hodnocení je spojeno s proměnnou $rating, a komentář je spojen s proměnnou $comment)
-                    Když uživatel klikne na hvězdičky, hodnota hodnocení se automaticky aktualizuje díky wire:model
-                    Odesláním formuláře (pomocí wire:submit.prevent="rate()") se odešle hodnocení na databázový server
-                    -->
                         @auth
                             <div class="w-full space-y-5">
                                 <p class="font-medium text-red-700 uppercase">
@@ -23,13 +17,6 @@
                                     </p>
                                 @endif
                             @if($hideForm != true)
-                            <!--
-                            Hodnocení zajišťují hvězdičky
-                            Každá hvězdička je reprezentována SVG ikonou
-                            Když je hodnocení 1 nebo více hvězdiček, barva se změní na indigo (modrá), jinak zůstane šedá
-                            wire:model="rating" propojuje hodnotu ratingu s proměnnou $rating v Livewire komponentě, takže při změně se hodnota automaticky 
-                            synchronizuje na serveru
-                            -->
                                 <form wire:submit.prevent="rate()">
                                     <div class="block max-w-3xl px-1 py-2 mx-auto">
                                         <div class="flex space-x-1 rating">
@@ -83,7 +70,6 @@
                         @endauth
                     </div>
                 </div>
-    
             </div>
         </div>
     </section>
@@ -97,15 +83,6 @@
                 </div>
             </div>
             <div class="box-border flex grid flex-wrap justify-center gap-10 -mx-4 text-center text-indigo-900 lg:gap-16 lg:justify-start lg:text-left">
-                <!--
-                Používá se smyčka zavináčforelse ($comments as $comment) k iteraci přes všechny komentáře
-                Pro každý komentář se zobrazí hodnocení a text komentáře
-                Dále se zobrazuje uživatelské jméno komentujícího uživatele a jeho hodnocení
-                Pokud je uživatel admin nebo vlastník komentáře, má možnost tento komentář smazat
-
-                Každý komentář je zobrazen v odděleném bloku, kde se zobrazuje uživatelské jméno a komentář, stejně jako hodnocení (počet hvězdiček)
-                Pokud zde není žádný komentář, zobrazuje se zpráva která to oznamuje 
-                -->
                 @forelse ($comments as $comment)
                     <div class="flex col-span-1">
                         <div class="relative flex-shrink-0 w-20 h-20 text-left">
@@ -141,8 +118,6 @@
                         </div>
                     </div>
                 @endforelse
-
             </div>
     </section>
-    
 </div>

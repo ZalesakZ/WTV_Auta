@@ -11,11 +11,11 @@ class ModelVsechnyAuta extends Model
 
     public function ratings()
     {
-        return $this->hasMany(Rating::class, 'product_id', 'fixni_ID'); // Ujistěte se, že 'product_id' odpovídá vašemu cizímu klíči
+        return $this->hasMany(Rating::class, 'product_id', 'fixni_ID'); 
     }
 
     public function getAverageRatingAttribute()
     {
-        return $this->ratings()->avg('rating') ?? 0; // Pokud není hodnocení, vrací 0
+        return $this->ratings()->avg('rating') ?? 0; 
     }
 }
